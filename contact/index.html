@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Get in touch with PALNET</title>
+  <meta name="description" content="Request a PALNET site visit, ask about membership, or get in touch with our leadership team. Contact PALNET — the Pediatric Anesthesia Learning Network for EEG.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact PALNET">
+  <meta property="og:description" content="Get in touch with PALNET about site visits, membership, or general inquiries.">
+  <meta property="og:url" content="https://pedseeg.com/contact/">
+  <meta property="og:image" content="https://pedseeg.com/assets/images/logo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/assets/images/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a href="/" class="brand" aria-label="PALNET home">
+          <img src="/assets/images/logo.jpg" alt="" width="40" height="40">
+          <span class="brand-text">
+            <span class="brand-name">PALNET</span>
+            <span class="brand-tag">Pediatric anesthesia · EEG</span>
+          </span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+          <span aria-hidden="true">☰</span>
+          <span>Menu</span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/leadership/">Leadership</a></li>
+          <li><a href="/education/">Education</a></li>
+          <li><a href="/events/">Events</a></li>
+          <li><a href="/members/">Members</a></li>
+          <li><a href="/sponsors/">Sponsors</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>Get in touch.</h1>
+        <p>Request a site visit, ask about membership, propose a workshop, or just say hello. We typically respond within a few business days.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; max-width: 1000px; margin: 0 auto;">
+          <div>
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form" action="/contact/?sent=1">
+              <input type="hidden" name="form-name" value="contact">
+              <p hidden>
+                <label>Don't fill this out if you're human: <input name="bot-field"></label>
+              </p>
+
+              <div class="form-row grid-2">
+                <div class="form-row">
+                  <label for="name">Your name</label>
+                  <input type="text" id="name" name="name" required autocomplete="name">
+                </div>
+                <div class="form-row">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required autocomplete="email">
+                </div>
+              </div>
+
+              <div class="form-row grid-2">
+                <div class="form-row">
+                  <label for="institution">Institution</label>
+                  <input type="text" id="institution" name="institution" autocomplete="organization">
+                </div>
+                <div class="form-row">
+                  <label for="role">Your role</label>
+                  <input type="text" id="role" name="role" placeholder="e.g., pediatric anesthesiologist" autocomplete="organization-title">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="interest">What can we help with?</label>
+                <select id="interest" name="interest" required>
+                  <option value="">Choose one…</option>
+                  <option value="site-visit">Request a site visit</option>
+                  <option value="membership">Ask about institutional membership</option>
+                  <option value="workshop">Invite PALNET to speak / host a workshop</option>
+                  <option value="education">Question about the curriculum or videos</option>
+                  <option value="teaching">Interest in joining the teaching network</option>
+                  <option value="sponsorship">Sponsorship or partnership inquiry</option>
+                  <option value="other">Something else</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Tell us a little about your team, your equipment, and what you're hoping to get out of PALNET."></textarea>
+              </div>
+
+              <div class="form-row">
+                <button class="btn btn-primary" type="submit" style="align-self: flex-start;">Send message</button>
+                <span class="hint" style="margin-top: 0.5rem;">By submitting, you agree to be contacted by a PALNET leadership member about your inquiry.</span>
+              </div>
+            </form>
+          </div>
+
+          <aside style="background: var(--paper-tint); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.75rem;">
+            <h3 style="margin-top: 0;">Other ways to reach us</h3>
+            <p><strong>General inquiries</strong><br>
+              <a href="mailto:contact@pedseeg.com">contact@pedseeg.com</a></p>
+            <p><strong>Administrative home</strong><br>
+              Society for Pediatric Anesthesia (SPA)</p>
+            <p><strong>Canadian inquiries</strong><br>
+              The Hospital for Sick Children, Department of Anesthesia, Toronto, ON</p>
+
+            <hr style="margin: 1.5rem 0;">
+
+            <h4>Looking for…</h4>
+            <ul style="padding-left: 1.2em; font-size: 0.95rem;">
+              <li><a href="/events/#request">A site visit at your hospital</a></li>
+              <li><a href="/education/">Lectures and videos</a></li>
+              <li><a href="/members/">Member institutions</a></li>
+              <li><a href="/sponsors/">Sponsorship information</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <img src="/assets/images/logo.jpg" alt="" width="44" height="44" style="border-radius: 50%;">
+            <strong style="color: #fff;">PALNET</strong>
+          </div>
+          <p>Pediatric Anesthesia Learning Network for Emerging Technology. An international clinician-led collaborative advancing EEG-guided care for children.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="/about/">About PALNET</a></li>
+            <li><a href="/education/">Curriculum &amp; videos</a></li>
+            <li><a href="/leadership/">Leadership</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Engage</h4>
+          <ul>
+            <li><a href="/events/">Events &amp; site visits</a></li>
+            <li><a href="/members/">Member institutions</a></li>
+            <li><a href="/sponsors/">Sponsors &amp; partners</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="/contact/">Get in touch</a></li>
+            <li><a href="mailto:contact@pedseeg.com">contact@pedseeg.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PALNET. All rights reserved.</span>
+        <span>Founded 2022 · Vendor-agnostic · International</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
