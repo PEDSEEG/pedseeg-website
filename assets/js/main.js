@@ -19,4 +19,21 @@
       link.setAttribute("aria-current", "page");
     }
   });
+
+  // Contact form success state: when redirected back with ?sent=1,
+  // show the thank-you message, hide the form, and clean up the URL.
+  if (window.location.search.indexOf("sent=1") !== -1) {
+    const successBox = document.getElementById("form-success");
+    const contactForm = document.getElementById("contact-form");
+    if (successBox) {
+      successBox.style.display = "block";
+      successBox.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+    if (contactForm) {
+      contactForm.style.display = "none";
+    }
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  }
 })();

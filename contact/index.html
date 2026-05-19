@@ -63,7 +63,12 @@
       <div class="container">
         <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; max-width: 1000px; margin: 0 auto;">
           <div>
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form" action="/contact/?sent=1">
+            <div id="form-success" class="callout" style="display: none;" role="status" aria-live="polite">
+              <h3 style="margin-top: 0;">Thanks for getting in touch.</h3>
+              <p>We received your message and a member of the PALNET leadership committee will respond within a few business days.</p>
+              <p style="margin-bottom: 0;"><a href="/">Return to the homepage</a> · <a href="/contact/">Send another message</a></p>
+            </div>
+            <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form" action="/contact/?sent=1">
               <input type="hidden" name="form-name" value="contact">
               <p hidden>
                 <label>Don't fill this out if you're human: <input name="bot-field"></label>
