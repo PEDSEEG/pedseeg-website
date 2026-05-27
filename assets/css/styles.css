@@ -575,6 +575,69 @@ hr {
   color: #94a3b8;
 }
 
+/* ---------- Literature list ---------- */
+.lit-list {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.lit-entry {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem;
+}
+.lit-entry h3 {
+  font-size: 1.08rem;
+  margin: 0 0 0.4em;
+  line-height: 1.35;
+  font-weight: 600;
+}
+.lit-entry h3 a { color: var(--ink); text-decoration: none; }
+.lit-entry h3 a:hover { color: var(--accent); text-decoration: underline; }
+.lit-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.7em;
+}
+.lit-cite { font-size: 0.92rem; color: var(--muted); margin: 0 0 0.7em; }
+.lit-cite em { font-style: italic; color: var(--ink-soft); }
+.lit-annotation { font-size: 0.98rem; color: var(--ink-soft); margin: 0 0 0.8em; }
+.lit-links { font-size: 0.88rem; margin: 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; }
+.lit-links a { color: var(--accent); text-decoration: none; }
+.lit-links a:hover { text-decoration: underline; }
+
+.lit-compact {
+  list-style: none; padding: 0; margin: 1rem 0 0;
+  display: flex; flex-direction: column; gap: 0.75rem;
+}
+.lit-compact > li {
+  padding: 0.85rem 1.1rem;
+  background: var(--paper);
+  border-left: 3px solid var(--border);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.lit-c-title { font-weight: 600; font-size: 0.98rem; line-height: 1.35; }
+.lit-c-title a { color: var(--ink); text-decoration: none; }
+.lit-c-title a:hover { color: var(--accent); text-decoration: underline; }
+.lit-c-cite { font-size: 0.88rem; color: var(--muted); margin-top: 0.2em; }
+.lit-c-cite em { font-style: italic; color: var(--ink-soft); }
+.lit-c-links { font-size: 0.82rem; margin-top: 0.35em; }
+.lit-c-links a { color: var(--accent); text-decoration: none; margin-right: 0.85em; }
+.lit-c-links a:hover { text-decoration: underline; }
+.lit-subcat {
+  margin: 2.5rem 0 0.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  font-weight: 700;
+}
+
 /* ---------- In-page table of contents ---------- */
 .page-toc {
   background: var(--paper-tint);
