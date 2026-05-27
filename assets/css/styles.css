@@ -575,6 +575,50 @@ hr {
   color: #94a3b8;
 }
 
+/* ---------- In-page table of contents ---------- */
+.page-toc {
+  background: var(--paper-tint);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.6rem 1.4rem;
+  margin: 0 0 2.5rem;
+}
+.page-toc-title {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+}
+.page-toc ol {
+  list-style: decimal-leading-zero;
+  margin: 0;
+  padding-left: 1.6em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.25em 1.5rem;
+  font-size: 0.96rem;
+  color: var(--muted);
+}
+@media (min-width: 640px) {
+  .page-toc ol { grid-template-columns: 1fr 1fr; }
+}
+.page-toc a {
+  text-decoration: none;
+  color: var(--ink-soft);
+}
+.page-toc a:hover { color: var(--accent); text-decoration: underline; }
+
+/* Anchored sub-sections on long content pages */
+.page-block {
+  margin-top: 3.5rem;
+  scroll-margin-top: 5rem;
+}
+.page-block:first-of-type { margin-top: 2.5rem; }
+.page-block h2 { margin-bottom: 1rem; }
+.page-block + .page-block { border-top: 1px solid var(--border); padding-top: 3.5rem; }
+
 /* ---------- Utility ---------- */
 .text-center { text-align: center; }
 .mt-0 { margin-top: 0; }
