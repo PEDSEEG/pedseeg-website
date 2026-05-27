@@ -638,6 +638,60 @@ hr {
   font-weight: 700;
 }
 
+/* Collapsible literature sub-categories (native <details>) */
+.lit-category {
+  margin-top: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+  overflow: hidden;
+}
+.lit-category + .lit-category { margin-top: 0.75rem; }
+.lit-category > summary {
+  cursor: pointer;
+  padding: 1rem 1.4rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  list-style: none;
+  transition: background-color 0.15s;
+}
+.lit-category > summary::-webkit-details-marker { display: none; }
+.lit-category > summary::before {
+  content: "▸";
+  color: var(--accent);
+  margin-right: 0.6em;
+  font-size: 0.85em;
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+.lit-category[open] > summary::before { transform: rotate(90deg); }
+.lit-category > summary:hover { background: var(--paper-tint); }
+.lit-category > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+.lit-category-summary-text { flex: 1; }
+.lit-category-count {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+.lit-category > .lit-compact {
+  padding: 0 1.4rem 1.4rem;
+  margin: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
 /* ---------- In-page table of contents ---------- */
 .page-toc {
   background: var(--paper-tint);
