@@ -21,3 +21,4 @@ build/
 # Env files
 .env
 .env.local
+content-drop/
