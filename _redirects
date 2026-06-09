@@ -1,2 +1,6 @@
 /home   /   301
 /index  /   301
+
+# Sponsors page hidden pending sponsor consent (FLAG 3) - remove these 2 lines to restore
+/sponsors      /   302!
+/sponsors/*    /   302!
