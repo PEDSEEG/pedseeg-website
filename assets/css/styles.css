@@ -742,6 +742,36 @@ hr {
 .reading-list li { margin-bottom: 0.6em; line-height: 1.5; font-size: 0.97rem; }
 .reading-list li a { white-space: nowrap; }
 
+/* ---------- Org structure tiers (About page) ---------- */
+.org-tiers {
+  max-width: 640px;
+  margin: 1.75rem auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.org-tier {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem 1.4rem;
+  text-align: center;
+  background: var(--paper);
+}
+.org-tier-lead { background: var(--accent-soft); border-color: var(--accent-soft); }
+.org-tier-advisory { background: var(--warm-soft); border-color: var(--warm-soft); }
+.org-tier-label {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.org-tier-sub { font-size: 0.92rem; color: var(--ink-soft); margin-top: 0.35rem; line-height: 1.45; }
+.org-connector { width: 2px; height: 1.6rem; background: var(--muted-soft); margin: 0 auto; }
+
 /* ---------- Utility ---------- */
 .text-center { text-align: center; }
 .mt-0 { margin-top: 0; }
