@@ -742,35 +742,73 @@ hr {
 .reading-list li { margin-bottom: 0.6em; line-height: 1.5; font-size: 0.97rem; }
 .reading-list li a { white-space: nowrap; }
 
-/* ---------- Org structure tiers (About page) ---------- */
-.org-tiers {
-  max-width: 640px;
-  margin: 1.75rem auto 0;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-.org-tier {
+/* ---------- Org chart (About page Structure) ---------- */
+.org-structure { margin-top: 1.75rem; }
+
+/* Leadership flow: Advisory Board -> Board of Directors */
+.org-feeder { max-width: 540px; margin: 0 auto; }
+.org-box {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 1.1rem 1.4rem;
+  padding: 1rem 1.25rem;
   text-align: center;
   background: var(--paper);
 }
-.org-tier-lead { background: var(--accent-soft); border-color: var(--accent-soft); }
-.org-tier-advisory { background: var(--warm-soft); border-color: var(--warm-soft); }
-.org-tier-label {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--ink);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+.org-box-advisory { background: var(--warm-soft); border-color: var(--warm-soft); }
+.org-box-board { background: var(--accent-soft); border-color: var(--accent-soft); }
+.org-box-title {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  flex-wrap: wrap; font-weight: 700; font-size: 1.08rem; color: var(--ink);
 }
-.org-tier-sub { font-size: 0.92rem; color: var(--ink-soft); margin-top: 0.35rem; line-height: 1.45; }
-.org-connector { width: 2px; height: 1.6rem; background: var(--muted-soft); margin: 0 auto; }
+.org-box-desc { display: block; font-size: 0.9rem; color: var(--ink-soft); margin-top: 0.3rem; line-height: 1.45; }
+
+/* vertical connector with a centered pill label */
+.org-link { position: relative; height: 2.6rem; display: flex; align-items: center; justify-content: center; }
+.org-link::before {
+  content: ''; position: absolute; top: 0; bottom: 0; left: 50%;
+  width: 2px; background: var(--muted-soft); transform: translateX(-50%);
+}
+.org-link span, .org-oversees {
+  position: relative; z-index: 1;
+  font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--muted); background: var(--paper);
+  border: 1px solid var(--border); border-radius: 999px; padding: 0.12rem 0.7rem;
+}
+
+/* Board -> functional teams tree */
+.org-tree-wrap { position: relative; padding-top: 2.8rem; }
+.org-tree-wrap::before {
+  content: ''; position: absolute; top: 0; left: 50%;
+  width: 2px; height: 2.8rem; background: var(--muted-soft); transform: translateX(-50%);
+}
+.org-oversees { position: absolute; top: 0.95rem; left: 50%; transform: translateX(-50%); }
+.org-tree { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; }
+.org-tree > li { position: relative; flex: 1 1 0; max-width: 210px; padding: 1.6rem 0.4rem 0; }
+.org-tree > li::before, .org-tree > li::after {
+  content: ''; position: absolute; top: 0; right: 50%;
+  width: 50%; height: 1.6rem; border-top: 2px solid var(--muted-soft);
+}
+.org-tree > li::after { right: auto; left: 50%; border-left: 2px solid var(--muted-soft); }
+.org-tree > li:first-child::before, .org-tree > li:last-child::after { border: 0 none; }
+.org-tree > li:last-child::before { border-right: 2px solid var(--muted-soft); }
+.org-node {
+  height: 100%; background: var(--paper); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 0.9rem 0.85rem; box-shadow: var(--shadow-sm); text-align: center;
+}
+.org-node-title { display: block; font-weight: 700; margin: 0.5rem 0 0.25rem; }
+.org-node-desc { display: block; font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+
+@media (max-width: 680px) {
+  .org-tree { flex-direction: column; align-items: stretch; max-width: 340px; margin: 0 auto; }
+  .org-tree > li { max-width: none; width: 100%; padding: 1.3rem 0 0; }
+  .org-tree > li::before { display: none; }
+  .org-tree > li::after {
+    right: auto; left: 50%; transform: translateX(-50%);
+    width: 0; height: 1.3rem; border-top: 0; border-left: 2px solid var(--muted-soft);
+  }
+  .org-tree > li:last-child::after { border-left: 2px solid var(--muted-soft); }
+  .org-tree > li:last-child::before { border: 0 none; }
+}
 
 /* ---------- Utility ---------- */
 .text-center { text-align: center; }
