@@ -743,24 +743,33 @@ hr {
 .reading-list li a { white-space: nowrap; }
 
 /* ---------- Org chart (About page Structure) ---------- */
-.org-structure { margin-top: 1.5rem; width: min(960px, 92vw); position: relative; left: 50%; transform: translateX(-50%); }
+.org-structure { margin-top: 1.5rem; width: min(1080px, 94vw); position: relative; left: 50%; transform: translateX(-50%); }
 .org-badge { display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 0.25rem 0.85rem; margin-bottom: 1.5rem; }
 
 .org-box { border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 0.95rem 1.2rem; text-align: center; background: var(--paper); }
 .org-box-board { display: inline-block; background: var(--accent-soft); border-color: var(--accent-soft); max-width: 460px; }
-.org-box-advisory { background: var(--warm-soft); border-color: var(--warm-soft); max-width: 220px; }
 .org-box-title { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; flex-wrap: wrap; font-weight: 700; font-size: 1.05rem; color: var(--ink); }
 .org-box-desc { display: block; font-size: 0.86rem; color: var(--ink-soft); margin-top: 0.25rem; line-height: 1.4; }
+.org-board-row { text-align: center; }
 
-/* board centered; advisory to the side (out of flow so the board connects straight down) */
-.org-board-row { position: relative; text-align: center; }
-.org-advisory { position: absolute; top: 50%; right: 0; transform: translateY(-50%); display: flex; align-items: center; }
-.org-side-line { flex: 0 0 1.4rem; height: 2px; background: var(--muted-soft); }
+/* wings: Partners/Research (left, dashed) | spine | Collaborators (right, dashed) + Advisory (right, solid) */
+.org-wings { position: relative; display: grid; grid-template-columns: 1fr 0 1fr; row-gap: 1.4rem; padding: 1.5rem 0; }
+.org-wings::before { content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: var(--muted-soft); transform: translateX(-50%); }
+.org-wing { display: flex; align-items: center; min-width: 0; }
+.org-wing-left { justify-self: end; }
+.org-wing-right { justify-self: start; }
+.org-conn { flex: 0 0 34px; height: 0; border-top: 2px solid var(--muted-soft); }
+.org-conn-dashed { border-top-style: dashed; }
+.org-wing-card { width: 240px; max-width: 40vw; border: 2px solid var(--border); border-radius: var(--radius); padding: 0.7rem 0.95rem; background: var(--paper); text-align: left; }
+.org-wing-card.is-outside { border-style: dashed; }
+.org-wing-card.org-box-advisory { border-style: solid; border-color: var(--warm-soft); background: var(--warm-soft); }
+.org-wing-card h4 { margin: 0 0 0.2rem; font-size: 0.95rem; }
+.org-wing-card p { margin: 0; font-size: 0.8rem; color: var(--ink-soft); line-height: 1.4; }
 
-/* stem: board -> domains */
-.org-tree-wrap { position: relative; padding-top: 2.8rem; }
-.org-tree-wrap::before { content: ''; position: absolute; top: 0; left: 50%; width: 2px; height: 2.8rem; background: var(--muted-soft); transform: translateX(-50%); }
-.org-oversees { position: absolute; top: 0.95rem; left: 50%; transform: translateX(-50%); z-index: 1; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); background: var(--paper); border: 1px solid var(--border); border-radius: 999px; padding: 0.12rem 0.7rem; }
+/* oversees connector + domains tree */
+.org-oversees-row { position: relative; height: 2.4rem; }
+.org-oversees-row::before { content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: var(--muted-soft); transform: translateX(-50%); }
+.org-oversees { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); background: var(--paper); border: 1px solid var(--border); border-radius: 999px; padding: 0.12rem 0.7rem; }
 
 .org-tree { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; align-items: stretch; }
 .org-tree > li { position: relative; flex: 1 1 0; max-width: 220px; padding: 1.6rem 0.35rem 0; }
@@ -770,30 +779,27 @@ hr {
 .org-tree > li:last-child::before { border-right: 2px solid var(--muted-soft); }
 
 .org-domain { height: 100%; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--paper); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; }
-.org-domain-head { background: var(--accent); color: #fff; font-weight: 700; padding: 0.5rem 0.5rem; text-align: center; font-size: 0.98rem; }
+.org-domain-head { background: var(--accent); color: #fff; font-weight: 700; padding: 0.5rem; text-align: center; font-size: 0.98rem; }
 .org-domain-lead { background: var(--warm-soft); color: var(--warm); font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; text-align: center; padding: 0.32rem 0.4rem; }
 .org-domain-list { list-style: none; margin: 0; padding: 0.65rem 0.55rem 0.7rem 0.95rem; font-size: 0.85rem; }
 .org-domain-list li { margin: 0; padding: 0.16rem 0 0.16rem 0.85rem; position: relative; color: var(--ink-soft); }
 .org-domain-list li::before { content: '\2022'; position: absolute; left: 0; color: var(--accent); }
 
-.org-external { margin-top: 2.75rem; }
-.org-external > h3 { margin-bottom: 0.25rem; }
-.org-external-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.1rem; }
-.org-ext-card { border: 2px dashed var(--muted-soft); border-radius: var(--radius); padding: 1rem 1.15rem; background: var(--paper); }
-.org-ext-card h4 { margin: 0 0 0.3rem; font-size: 1rem; }
-.org-ext-card p { margin: 0; font-size: 0.88rem; color: var(--ink-soft); line-height: 1.45; }
-@media (min-width: 720px) { .org-external-grid { grid-template-columns: repeat(3, 1fr); } }
-
-.org-legend { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.25rem; font-size: 0.82rem; color: var(--muted); }
+.org-legend { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.5rem; font-size: 0.82rem; color: var(--muted); }
 .org-legend span { display: inline-flex; align-items: center; gap: 0.5rem; }
 .org-legend .ln { width: 26px; border-top: 2px solid var(--muted-soft); }
 .org-legend .ln-dash { border-top-style: dashed; }
 
-@media (max-width: 680px) {
+@media (max-width: 860px) {
   .org-structure { width: 100%; left: auto; transform: none; }
-  .org-advisory { position: static; transform: none; flex-direction: column; margin-top: 1.1rem; }
-  .org-side-line { width: 2px; height: 1.3rem; flex: 0 0 1.3rem; }
-  .org-box-board, .org-box-advisory { max-width: none; width: 100%; display: block; }
+  .org-wings { grid-template-columns: 1fr; row-gap: 0; padding: 0; }
+  .org-wings::before { display: none; }
+  .org-wing { justify-self: stretch; flex-direction: column; margin-top: 1.1rem; }
+  .org-conn { flex: 0 0 1.1rem; width: 2px; height: 1.1rem; border-top: 0; border-left: 2px solid var(--muted-soft); }
+  .org-conn-dashed { border-left-style: dashed; border-top: 0; }
+  .org-wing-right { flex-direction: column-reverse; }
+  .org-wing-card { width: 100%; max-width: none; }
+  .org-box-board { max-width: none; width: 100%; }
   .org-tree { flex-direction: column; align-items: stretch; max-width: 340px; margin: 0 auto; }
   .org-tree > li { max-width: none; width: 100%; padding: 1.3rem 0 0; }
   .org-tree > li::before { display: none; }
