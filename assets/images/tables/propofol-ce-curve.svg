@@ -1,0 +1,58 @@
+<svg viewBox="0 0 920 480" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, 'Helvetica Neue', Arial, sans-serif" role="img" aria-label="Propofol effect-site concentration (Ce) versus time, comparing a target Ce of 3 and 4.5 micrograms per milliliter through bolus, maintenance infusion, and emergence, against Ce-Anesthesia and Ce-Sedation ranges.">
+  <defs>
+    <marker id="axArr" markerWidth="9" markerHeight="9" refX="2" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#111827"/></marker>
+    <marker id="tArr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#0f766e"/></marker>
+    <marker id="aArr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#d97706"/></marker>
+  </defs>
+
+  <!-- Ce-Anesthesia band (Ce 3 to 5) -->
+  <rect x="80" y="126.7" width="640" height="113.3" fill="#eef2f4"/>
+  <text x="370" y="172" font-size="17" font-style="italic" font-weight="600" fill="#475569" text-anchor="middle">Ce-Anesthesia</text>
+  <!-- Ce-Sedation zone (Ce 2 to 3) -->
+  <text x="370" y="276" font-size="17" font-style="italic" font-weight="600" fill="#64748b" text-anchor="middle">Ce-Sedation</text>
+
+  <!-- dashed reference lines at Ce 3 and Ce 2 -->
+  <line x1="80" y1="240" x2="720" y2="240" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <line x1="80" y1="296.7" x2="720" y2="296.7" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+
+  <!-- y ticks + labels -->
+  <g font-size="14" fill="#475569" text-anchor="end">
+    <line x1="74" y1="353.3" x2="80" y2="353.3" stroke="#94a3b8"/><text x="68" y="358">1</text>
+    <line x1="74" y1="296.7" x2="80" y2="296.7" stroke="#94a3b8"/><text x="68" y="301">2</text>
+    <line x1="74" y1="240" x2="80" y2="240" stroke="#94a3b8"/><text x="68" y="245">3</text>
+    <line x1="74" y1="183.3" x2="80" y2="183.3" stroke="#94a3b8"/><text x="68" y="188">4</text>
+    <line x1="74" y1="126.7" x2="80" y2="126.7" stroke="#94a3b8"/><text x="68" y="131">5</text>
+    <line x1="74" y1="70" x2="80" y2="70" stroke="#94a3b8"/><text x="68" y="75">6</text>
+  </g>
+
+  <!-- axes -->
+  <line x1="80" y1="410" x2="80" y2="58" stroke="#111827" stroke-width="2.5" marker-end="url(#axArr)"/>
+  <line x1="80" y1="410" x2="752" y2="410" stroke="#111827" stroke-width="2.5" marker-end="url(#axArr)"/>
+  <text x="30" y="240" font-size="16" font-weight="600" fill="#111827" text-anchor="middle" transform="rotate(-90 30 240)">Propofol Ce (&#181;g/ml)</text>
+  <text x="400" y="446" font-size="16" font-weight="600" fill="#111827" text-anchor="middle">Time</text>
+
+  <!-- phase brackets -->
+  <g stroke="#64748b" stroke-width="1.5" fill="none">
+    <path d="M82,56 L82,49 L162,49 L162,56"/>
+    <path d="M168,56 L168,49 L556,49 L556,56"/>
+    <path d="M562,56 L562,49 L720,49 L720,56"/>
+  </g>
+  <g font-size="15" fill="#334155" text-anchor="middle">
+    <text x="122" y="40">Bolus</text>
+    <text x="362" y="40">Maintenance infusion</text>
+    <text x="641" y="40">Emergence</text>
+  </g>
+
+  <!-- Target Ce 4.5 curve (amber, dash-dot) -->
+  <path d="M80,410 C92,410 132,150 152,146 C170,153 190,161 210,160.7 L560,160.7 C602,169 658,238 716,300"
+        fill="none" stroke="#d97706" stroke-width="3" stroke-dasharray="12 5 3 5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Target Ce 3 curve (teal, solid) -->
+  <path d="M80,410 C90,410 124,170 145,175 C164,185 192,228 212,229 L560,229 C598,236 614,286 638,298 C666,316 698,362 716,388"
+        fill="none" stroke="#0f766e" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- target labels + arrows -->
+  <line x1="792" y1="168" x2="712" y2="262" stroke="#d97706" stroke-width="1.6" marker-end="url(#aArr)"/>
+  <text x="800" y="162" font-size="16" font-weight="700" fill="#b45309">Target Ce 4.5</text>
+  <line x1="792" y1="348" x2="706" y2="352" stroke="#0f766e" stroke-width="1.6" marker-end="url(#tArr)"/>
+  <text x="800" y="344" font-size="16" font-weight="700" fill="#0f766e">Target Ce 3</text>
+</svg>
