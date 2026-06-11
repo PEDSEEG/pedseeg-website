@@ -809,10 +809,24 @@ hr {
 }
 
 /* ---------- Quick-reference tables (Education) ---------- */
-.ref-grid { display: grid; grid-template-columns: 1fr; gap: 1.75rem; max-width: 640px; margin: 2rem auto 0; }
+.ref-grid { display: grid; grid-template-columns: 1fr; gap: 1.75rem; margin: 2rem 0 0; }
+@media (min-width: 920px) { .ref-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; } }
 .ref-card { border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; background: var(--paper); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; }
 .ref-figure { display: block; background: var(--paper-tint); padding: 0.75rem; border-bottom: 1px solid var(--border); }
 .ref-figure img { width: 100%; height: auto; border: 1px solid var(--border); border-radius: 6px; }
+.ref-table-wrap { overflow-x: auto; }
+.ref-table { border-collapse: collapse; width: 100%; font-size: 0.82rem; background: var(--paper); }
+.ref-table th, .ref-table td { border: 1px solid var(--border); padding: 0.4rem 0.55rem; text-align: left; vertical-align: top; }
+.ref-table thead th { background: var(--accent); color: #fff; font-weight: 600; }
+.ref-table tbody tr:nth-child(even) { background: var(--paper-tint); }
+.ref-table td:first-child { font-weight: 600; color: var(--ink); }
+.ref-algo-wrap { padding: 0.25rem; }
+.ref-algo { display: flex; flex-direction: column; gap: 0.6rem; }
+.ref-algo-q { font-weight: 700; text-align: center; background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 0.3rem 0.7rem; font-size: 0.84rem; }
+.ref-algo-branches { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.4rem; }
+.ref-algo-branch { border: 1px solid var(--border); border-radius: var(--radius); padding: 0.45rem 0.6rem; font-size: 0.8rem; color: var(--ink-soft); }
+.ref-algo-branch b { display: block; color: var(--warm); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.1rem; }
+.ref-provisional { display: inline-block; font-size: 0.7rem; font-weight: 700; color: var(--warm); background: var(--warm-soft); border-radius: 999px; padding: 0.2rem 0.6rem; margin-bottom: 0.7rem; }
 .ref-body { padding: 1.25rem 1.4rem 1.4rem; display: flex; flex-direction: column; }
 .ref-body h3 { margin: 0 0 0.3rem; }
 .ref-meta { font-size: 0.9rem; color: var(--ink-soft); margin: 0 0 0.75rem; }
