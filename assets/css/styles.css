@@ -808,6 +808,20 @@ hr {
   .org-tree > li:last-child::before { border: 0 none; }
 }
 
+/* ---------- Quick-reference tables (Education) ---------- */
+.ref-grid { display: grid; grid-template-columns: 1fr; gap: 1.75rem; max-width: 640px; margin: 2rem auto 0; }
+.ref-card { border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; background: var(--paper); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; }
+.ref-figure { display: block; background: var(--paper-tint); padding: 0.75rem; border-bottom: 1px solid var(--border); }
+.ref-figure img { width: 100%; height: auto; border: 1px solid var(--border); border-radius: 6px; }
+.ref-body { padding: 1.25rem 1.4rem 1.4rem; display: flex; flex-direction: column; }
+.ref-body h3 { margin: 0 0 0.3rem; }
+.ref-meta { font-size: 0.9rem; color: var(--ink-soft); margin: 0 0 0.75rem; }
+.ref-note { font-size: 0.88rem; font-style: italic; color: var(--ink-soft); border-left: 3px solid var(--accent); padding-left: 0.75rem; margin: 0 0 0.85rem; }
+.ref-disclaimer { font-size: 0.82rem; color: #92400e; background: var(--warm-soft); border: 1px solid #fde68a; border-radius: var(--radius); padding: 0.6rem 0.8rem; margin: 0 0 1rem; }
+.ref-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.9rem; }
+.ref-actions .btn { padding: 0.55rem 1rem; font-size: 0.92rem; }
+.ref-foot { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0; }
+
 /* ---------- Utility ---------- */
 .text-center { text-align: center; }
 .mt-0 { margin-top: 0; }
