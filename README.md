@@ -39,7 +39,7 @@ Then open <http://localhost:8000>. Browse through every page; nav links use clea
 
 ## Editing content
 
-Every page is a self-contained `.html` file. To edit content, open the file and edit the markup directly. The header (`<header class="site-header">`) and footer (`<footer class="site-footer">`) are duplicated on each page — when changing nav links or footer info, update all 8 pages.
+Every page is a self-contained `.html` file. To edit content, open the file and edit the markup directly. The header (`<header class="site-header">`) and footer (`<footer class="site-footer">`) are duplicated on each page — when changing nav links or footer info, update all 12 English pages (on `cases/` and `cases/sample/` the Español button points to the page's own Spanish twin) and the 3 Spanish pages under `/es/`, which have their own Spanish nav.
 
 Theme colors are CSS variables at the top of `assets/css/styles.css`. To recolor the site, change `--accent` and friends in one place.
 
