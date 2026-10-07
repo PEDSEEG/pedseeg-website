@@ -888,6 +888,8 @@ hr {
   vertical-align: 0.1em;
 }
 @media (min-width: 70em) {
+  /* Spanish labels run longer; tighter spacing keeps the menu on one row */
+  html[lang="es"] .nav-menu a { padding: 0.45rem 0.4rem; }
   .nav-menu .nav-lang { margin-left: 0.3rem; }
   .nav-menu .nav-lang a { padding: 0.4rem 0.7rem; font-size: 0.9rem; }
 }
