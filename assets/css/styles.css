@@ -306,6 +306,7 @@ hr {
   max-width: 60ch;
   margin: 0;
 }
+.page-header p + p { margin-top: 0.75rem; }
 
 /* ---------- Card grid ---------- */
 .grid {
