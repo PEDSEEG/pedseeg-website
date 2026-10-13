@@ -54,7 +54,7 @@
     bar.className = "lang-banner";
     bar.setAttribute("lang", "es");
     bar.innerHTML =
-      '<div class="container"><span>¿Prefiere leer en español? ' +
+      '<div class="container"><span>¿Prefieres leer en español? ' +
       '<a href="' + target + '">Ver PALNET en español →</a></span>' +
       '<button type="button" aria-label="Cerrar">×</button></div>';
     bar.querySelector("button").addEventListener("click", function () {

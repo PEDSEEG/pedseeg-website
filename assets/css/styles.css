@@ -873,13 +873,30 @@ hr {
 .tag-accent { background: var(--accent-soft); color: var(--accent); border-color: var(--accent-soft); }
 .tag-warm { background: var(--warm-soft); color: var(--warm); border-color: var(--warm-soft); }
 
-/* ---------- Language switch (EN / ES) ---------- */
-.nav-menu .nav-lang a {
+/* ---------- Language switch (EN | ES), visible at every width ---------- */
+.lang-switch {
+  display: inline-flex;
+  gap: 0.15rem;
+  padding: 0.2rem;
+  margin: 0 0.5rem 0 auto;
+  flex-shrink: 0;
   border: 1px solid var(--border);
-  color: var(--accent);
-  font-weight: 600;
+  border-radius: 999px;
+  background: var(--paper);
 }
-.nav-menu .nav-lang a:hover { border-color: var(--accent); }
+.lang-switch a, .lang-switch > span {
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  color: var(--muted);
+}
+.lang-switch a:hover { color: var(--accent); background: var(--paper-tint); }
+.lang-switch [aria-current="true"] { background: var(--accent); color: #fff; }
+/* Small phones: logo + name only, so the EN | ES switch and Menu fit beside them */
+@media (max-width: 26em) { .brand-tag { display: none; } }
 .nav-en {
   font-size: 0.68rem;
   font-weight: 600;
@@ -891,8 +908,10 @@ hr {
 @media (min-width: 70em) {
   /* Spanish labels run longer; tighter spacing keeps the menu on one row */
   html[lang="es"] .nav-menu a { padding: 0.45rem 0.4rem; }
-  .nav-menu .nav-lang { margin-left: 0.3rem; }
-  .nav-menu .nav-lang a { padding: 0.4rem 0.7rem; font-size: 0.9rem; }
+  /* Desktop: menu, then the EN | ES switch at the far right */
+  .nav-menu { order: 2; margin-left: auto; }
+  .lang-switch { order: 3; margin: 0; }
+  .lang-switch a, .lang-switch > span { padding: 0.25rem 0.5rem; }
 }
 
 /* Offer the Spanish site to visitors whose browser prefers Spanish */
