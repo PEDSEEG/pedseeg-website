@@ -8,6 +8,21 @@
   status = 301
   force = true
 
+# The default Netlify address points visitors at the real domain.
+# Deploy previews use other hostnames (deploy-preview-N--pedseeg) and are unaffected.
+[[redirects]]
+  from = "https://pedseeg.netlify.app/*"
+  to = "https://pedseeg.com/:splat"
+  status = 301
+  force = true
+
+# The README is maintainer documentation, not a page for visitors.
+[[redirects]]
+  from = "/README.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
