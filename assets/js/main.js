@@ -12,11 +12,11 @@
   }
 
   // Highlight current nav link: the longest link path that matches, so a
-  // case page lights up "Cases" and /es/casos/ lights "Caso del mes", not "Inicio".
+  // case page lights up "Cases" and /es/casos/ lights "Casos", not "Inicio".
   const path = window.location.pathname.replace(/\/index\.html$/, "/").replace(/\/$/, "") || "/";
   let best = null;
   let bestLen = -1;
-  document.querySelectorAll(".nav-menu li:not(.nav-lang) a").forEach(function (link) {
+  document.querySelectorAll(".nav-menu a").forEach(function (link) {
     const linkPath = link.getAttribute("href").replace(/\/$/, "") || "/";
     const matches = linkPath === path || (linkPath !== "/" && path.indexOf(linkPath + "/") === 0);
     if (matches && linkPath.length > bestLen) {

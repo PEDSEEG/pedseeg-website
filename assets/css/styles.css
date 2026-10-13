@@ -199,7 +199,7 @@ hr {
   color: var(--accent);
 }
 
-/* Ten top-level items: the full row only fits at the widest container
+/* Nine menu items plus the EN | ES switch: the full row only fits at the widest container
    (em-based so it also holds when visitors enlarge the text) */
 @media (min-width: 70em) {
   .brand { flex: 0 0 auto; }
@@ -291,7 +291,7 @@ hr {
   padding: 1.5rem;
   border: 1px solid var(--border);
 }
-.hero-image img { margin: 0 auto; max-width: 320px; }
+.hero-image img { margin: 0 auto; max-width: min(320px, 100%); }
 
 /* ---------- Page header (non-home) ---------- */
 .page-header {
@@ -897,14 +897,6 @@ hr {
 .lang-switch [aria-current="true"] { background: var(--accent); color: #fff; }
 /* Small phones: logo + name only, so the EN | ES switch and Menu fit beside them */
 @media (max-width: 26em) { .brand-tag { display: none; } }
-.nav-en {
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--muted);
-  margin-left: 0.3rem;
-  vertical-align: 0.1em;
-}
 @media (min-width: 70em) {
   /* Spanish labels run longer; tighter spacing keeps the menu on one row */
   html[lang="es"] .nav-menu a { padding: 0.45rem 0.4rem; }
