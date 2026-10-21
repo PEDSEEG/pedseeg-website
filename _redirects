@@ -1,2 +1,10 @@
 /home   /   301
 /index  /   301
+
+# San Diego workshop (Oct 2026) is over; its pages were removed.
+/events/asa-san-diego-2026      /events/      301
+/events/asa-san-diego-2026/*    /events/      301
+/es/eventos/asa-san-diego-2026    /es/eventos/  301
+/es/eventos/asa-san-diego-2026/*  /es/eventos/  301
+/assets/pdfs/sd-2026-walking-map-p357.pdf    /events/  301
+/assets/pdfs/sd-2026-walking-map-pangea.pdf  /events/  301
