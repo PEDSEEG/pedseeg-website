@@ -493,6 +493,31 @@ hr {
   letter-spacing: 0.02em;
 }
 .event-title { font-weight: 600; }
+
+/* ---------- Workshop attendee quotes ---------- */
+.quote-row { margin-top: 2rem; }
+.quote-row-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+.quote-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 880px) { .quote-grid { grid-template-columns: repeat(3, 1fr); } }
+.quote {
+  margin: 0;
+  padding: 1.1rem 1.25rem;
+  background: var(--paper-tint);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+}
+.quote blockquote { margin: 0; }
+.quote p { margin: 0; font-style: italic; color: var(--ink-soft); }
+.quote figcaption { margin-top: 0.6rem; font-size: 0.9rem; color: var(--muted); }
+.quote-feature { padding: 1.5rem 1.75rem; }
+.quote-feature p { font-size: 1.1rem; }
 .event-meta { font-size: 0.9rem; color: var(--muted); margin-top: 0.2em; }
 
 /* ---------- Members directory ---------- */
