@@ -65,6 +65,21 @@
     if (header && header.parentNode) header.parentNode.insertBefore(bar, header);
   })();
 
+  // Registration deadlines: once the data-closes time (ISO, with offset) has
+  // passed, swap in data-closed-text, or hide the element if it has none.
+  const now = Date.now();
+  document.querySelectorAll("[data-closes]").forEach(function (el) {
+    const closes = Date.parse(el.getAttribute("data-closes"));
+    if (isNaN(closes) || now < closes) return;
+    const closedText = el.getAttribute("data-closed-text");
+    if (closedText === null) {
+      el.style.display = "none";
+      return;
+    }
+    el.textContent = closedText;
+    el.classList.remove("tag-warm");
+  });
+
   // Contact form success state: when redirected back with ?sent=1,
   // show the thank-you message, hide the form, and clean up the URL.
   if (window.location.search.indexOf("sent=1") !== -1) {
