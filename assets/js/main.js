@@ -80,6 +80,24 @@
     el.classList.remove("tag-warm");
   });
 
+  // Copy link: copy the card's pedseeg.com address (never a preview host).
+  // Without JS, or without clipboard access, it stays a plain link to the card.
+  // The confirmation text comes from data-str-copied on the page, not from here.
+  document.querySelectorAll("a[data-copy-link]").forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      if (!navigator.clipboard || !window.isSecureContext) return;
+      e.preventDefault();
+      const url = "https://pedseeg.com" + window.location.pathname.replace(/index\.html$/, "") + link.hash;
+      const holder = link.closest("[data-str-copied]");
+      if (!link.hasAttribute("data-label")) link.setAttribute("data-label", link.textContent);
+      navigator.clipboard.writeText(url).then(function () {
+        if (!holder) return;
+        link.textContent = holder.getAttribute("data-str-copied");
+        setTimeout(function () { link.textContent = link.getAttribute("data-label"); }, 2000);
+      }, function () { window.location.hash = link.hash; });
+    });
+  });
+
   // Contact form success state: when redirected back with ?sent=1,
   // show the thank-you message, hide the form, and clean up the URL.
   if (window.location.search.indexOf("sent=1") !== -1) {
