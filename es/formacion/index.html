@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Formación — Vídeos, tablas y bibliografía científica sobre anestesia pediátrica guiada por EEG</title>
-  <meta name="description" content="Recursos formativos de PALNET para profesionales de la anestesia pediátrica: un programa formativo en vídeo seleccionado del canal EEG for Anesthesia, herramientas interactivas, tablas para el quirófano y bibliografía científica sobre la atención guiada por EEG.">
+  <title>Formación — Aprende anestesia pediátrica guiada por EEG, paso a paso</title>
+  <meta name="description" content="Un itinerario gratuito y paso a paso de PALNET sobre anestesia pediátrica guiada por EEG: vídeos recomendados, herramientas interactivas, las tablas de PALNET para el quirófano y artículos revisados por los profesores de PALNET.">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Formación de PALNET">
-  <meta property="og:description" content="Vídeos, herramientas interactivas, tablas para el quirófano y bibliografía científica sobre anestesia pediátrica guiada por EEG.">
+  <meta property="og:description" content="Aprende anestesia pediátrica guiada por EEG paso a paso: vídeos recomendados, herramientas interactivas, las tablas de PALNET para el quirófano y artículos revisados.">
   <meta property="og:url" content="https://pedseeg.com/es/formacion/">
   <meta property="og:image" content="https://pedseeg.com/assets/images/logo.jpg">
   <meta property="og:locale" content="es_ES">
@@ -17,6 +17,17 @@
   <link rel="alternate" hreflang="en" href="https://pedseeg.com/education/">
   <link rel="alternate" hreflang="es" href="https://pedseeg.com/es/formacion/">
   <link rel="alternate" hreflang="x-default" href="https://pedseeg.com/education/">
+
+  <script>
+    (function () {
+      var map = { tables: "/es/formacion/tablas/", literature: "/es/formacion/biblioteca/" };
+      var key = location.hash.slice(1);
+      if (map[key]) {
+        window.goatcounter = Object.assign(window.goatcounter || {}, { no_onload: true, no_events: true });
+        location.replace(map[key]);
+      }
+    })();
+  </script>
 
   <link rel="icon" href="/assets/images/logo.jpg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,285 +68,154 @@
     </div>
   </header>
 
-  <main id="main">
-    <section class="page-header">
+  <main id="main" class="edu-main">
+    <section class="page-header page-header--compact">
       <div class="container">
-        <span class="eyebrow">Formación</span>
-        <h1>El programa formativo de PALNET</h1>
-        <p>Un programa formativo en vídeo cuidadosamente seleccionado y bibliografía científica sobre anestesia pediátrica guiada por EEG, de acceso gratuito y pensados para los médicos que quieren empezar hoy mismo a leer el cerebro en el quirófano.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>Programa formativo en vídeo</h2>
-        <p class="lead">Como punto de partida recomendamos el canal de YouTube <a href="https://www.youtube.com/@eegforanesthesia3954" rel="noopener" target="_blank" data-goatcounter-click="es-edu-channel">EEG for Anesthesia</a> (en inglés): una introducción concisa y basada en la evidencia a la señal del EEG y a cómo la modifican los fármacos anestésicos. La enseñanza en el quirófano y los talleres de PALNET se apoyan directamente en esta base.</p>
-
-        <ol class="video-grid" style="max-width: 900px; margin: 2.5rem auto 0;">
-          <li>
-            <a class="video-tile" href="https://www.youtube.com/watch?v=K2dMqs7GfuI" rel="noopener" target="_blank" data-goatcounter-click="es-edu-video-ext-1">
-              <span class="video-tile-thumb"><img src="/assets/images/videos/eeg-for-anesthesia-part-1.jpg" alt="" width="640" height="360" loading="lazy"></span>
-              <span class="video-tile-text"><span class="video-tile-part">Parte 1</span> Introducción</span>
-              <span class="visually-hidden">(YouTube, se abre en una pestaña nueva)</span>
-            </a>
-          </li>
-          <li>
-            <a class="video-tile" href="https://www.youtube.com/watch?v=Alp7n5IKTmU" rel="noopener" target="_blank" data-goatcounter-click="es-edu-video-ext-2">
-              <span class="video-tile-thumb"><img src="/assets/images/videos/eeg-for-anesthesia-part-2.jpg" alt="" width="640" height="360" loading="lazy"></span>
-              <span class="video-tile-text"><span class="video-tile-part">Parte 2</span> La forma de onda del EEG y el espectrograma</span>
-              <span class="visually-hidden">(YouTube, se abre en una pestaña nueva)</span>
-            </a>
-          </li>
-          <li>
-            <a class="video-tile" href="https://www.youtube.com/watch?v=aceEqoqwugM" rel="noopener" target="_blank" data-goatcounter-click="es-edu-video-ext-3">
-              <span class="video-tile-thumb"><img src="/assets/images/videos/eeg-for-anesthesia-part-3.jpg" alt="" width="640" height="360" loading="lazy"></span>
-              <span class="video-tile-text"><span class="video-tile-part">Parte 3</span> Propofol</span>
-              <span class="visually-hidden">(YouTube, se abre en una pestaña nueva)</span>
-            </a>
-          </li>
-          <li>
-            <a class="video-tile" href="https://www.youtube.com/watch?v=wY46TNLYtyw" rel="noopener" target="_blank" data-goatcounter-click="es-edu-video-ext-4">
-              <span class="video-tile-thumb"><img src="/assets/images/videos/eeg-for-anesthesia-part-4.jpg" alt="" width="640" height="360" loading="lazy"></span>
-              <span class="video-tile-text"><span class="video-tile-part">Parte 4</span> Anestésicos inhalados derivados del éter</span>
-              <span class="visually-hidden">(YouTube, se abre en una pestaña nueva)</span>
-            </a>
-          </li>
-          <li>
-            <a class="video-tile" href="https://www.youtube.com/watch?v=SxmRAsEr9DQ" rel="noopener" target="_blank" data-goatcounter-click="es-edu-video-ext-5">
-              <span class="video-tile-thumb"><img src="/assets/images/videos/eeg-for-anesthesia-part-5.jpg" alt="" width="640" height="360" loading="lazy"></span>
-              <span class="video-tile-text"><span class="video-tile-part">Parte 5</span> Ketamina</span>
-              <span class="visually-hidden">(YouTube, se abre en una pestaña nueva)</span>
-            </a>
-          </li>
-          <li>
-            <a class="video-tile" href="https://www.youtube.com/watch?v=jetNwvJd-Hw" rel="noopener" target="_blank" data-goatcounter-click="es-edu-video-ext-6">
-              <span class="video-tile-thumb"><img src="/assets/images/videos/eeg-for-anesthesia-part-6.jpg" alt="" width="640" height="360" loading="lazy"></span>
-              <span class="video-tile-text"><span class="video-tile-part">Parte 6</span> Dexmedetomidina</span>
-              <span class="visually-hidden">(YouTube, se abre en una pestaña nueva)</span>
-            </a>
-          </li>
-        </ol>
-
-        <div class="callout" style="margin-top: 2.5rem;">
-          <h3 style="margin-top: 0;">Sobre el canal</h3>
-          <p>Los estándares actuales para valorar la profundidad anestésica se basan en medidas indirectas: frecuencia cardiaca, presión arterial, tono muscular y las interacciones farmacológicas que se presuponen. La neurociencia de sistemas moderna permite ya relacionar patrones reconocibles del EEG con los estados anestésicos que producen la mayoría de los fármacos de uso habitual. Familiarizarse con estos patrones ayuda a los profesionales de la anestesia a valorar con más detalle y precisión el estado anestésico de sus pacientes. Estos vídeos ofrecen una introducción breve y accesible a la señal del EEG en relación con los cambios del nivel de vigilia que provoca la anestesia.</p>
-          <p><a href="https://www.youtube.com/@eegforanesthesia3954" rel="noopener" target="_blank" data-goatcounter-click="es-edu-channel">Ver en YouTube →</a></p>
+        <div class="edu-hero">
+          <div>
+            <span class="eyebrow">Formación · Gratuita · A tu ritmo</span>
+            <h1>Aprende anestesia pediátrica guiada por EEG</h1>
+            <p>Paso a paso, para anestesiólogos y residentes que empiezan desde cero.</p>
+            <p class="edu-hero-cta"><a class="btn btn-primary" href="#start">Empieza aquí ↓</a></p>
+            <p class="edu-or-line">¿Estás en el quirófano y necesitas una tabla? <a href="/es/formacion/tablas/">Abre las tablas&nbsp;→</a></p>
+          </div>
+          <div>
+            <nav class="path-card" aria-labelledby="path-label">
+              <p class="path-card-label" id="path-label">El itinerario</p>
+              <ol>
+                <li><a href="#start">Empieza aquí: ¿por qué vigilar el cerebro en los niños? <span class="path-time">unos 6 min</span></a></li>
+                <li><a href="#read-the-screen">Lee la pantalla <span class="path-time">unos 20 min</span></a></li>
+                <li><a href="#signatures">Conoce los patrones: fármacos y edad <span class="path-time">unos 18 min</span></a></li>
+                <li><a href="#decide">Decide en el quirófano</a></li>
+                <li><a href="#in-person">Después: apréndelo en el quirófano con un profesor de PALNET</a></li>
+              </ol>
+            </nav>
+            <p class="path-note">¿Vas a ir a un taller de PALNET? Completa antes Empieza aquí, Lee la pantalla y Conoce los patrones.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="simulations">
-      <div class="container">
-        <h2>Simulaciones interactivas</h2>
-        <p class="lead">Tres simulaciones y un visor de archivos de EEG que funcionan en el navegador, desarrollados por <a href="/es/colaboradores/">SmartTIVA</a>, entidad colaboradora de PALNET. A diferencia de un vídeo o de un artículo, te permiten modificar los parámetros y ver cómo responde la señal: el aprendizaje es activo, no pasivo. No requieren instalación y funcionan en un portátil o en un móvil.</p>
-
-        <div class="grid grid-3" style="margin-top: 2rem;">
-          <article class="card">
-            <span class="eyebrow">Empieza aquí</span>
-            <h3>Combinador de ondas sinusoidales</h3>
-            <p>Suma cuatro ondas sinusoidales en tiempo real y modifica sus frecuencias para ver cómo un trazado compuesto se descompone en los ritmos que lo forman. Es la idea en la que se basa todo espectrograma, y la forma más rápida de hacerla tangible.</p>
-            <p><a href="https://demo.smarttiva.com/wavecombinator/" rel="noopener" target="_blank" data-goatcounter-click="es-edu-tool-wavecombinator">Abrir la simulación →</a></p>
-          </article>
-
-          <article class="card">
-            <span class="eyebrow">A continuación</span>
-            <h3>Cuadrícula giratoria 3D de la DSA</h3>
-            <p>Gira un espectrograma en tres dimensiones para ver cómo se construye el conocido mapa de calor plano: frecuencia, tiempo y potencia integrados en una sola superficie. Resulta útil para quien interprete la DSA vertical que se emplea en neuromonitorización.</p>
-            <p><a href="https://demo.smarttiva.com/rotation3d/" rel="noopener" target="_blank" data-goatcounter-click="es-edu-tool-rotation3d">Abrir la simulación →</a></p>
-          </article>
-
-          <article class="card">
-            <span class="eyebrow">Más adelante</span>
-            <h3>Banco de pruebas de EEG sin procesar y artefactos</h3>
-            <p>Señal y ruido, a partir de la ley de Ohm, con los escenarios clínicos que degradan un trazado en el quirófano. Los artefactos están entre lo más difícil de enseñar a pie de cama; aquí puedes generarlos a propósito y ver qué efecto tienen.</p>
-            <p><a href="https://demo.smarttiva.com/eegsandbox/" rel="noopener" target="_blank" data-goatcounter-click="es-edu-tool-eegsandbox">Abrir la simulación →</a></p>
-          </article>
-        </div>
-
-        <article class="card" style="margin-top: 1.5rem;">
-          <span class="eyebrow">Tus propios registros</span>
-          <h3>Visor de EDF</h3>
-          <p style="max-width: 70ch;">Abre un registro de EEG guardado como archivo EDF y visualiza dos canales en una DSA en espejo, con el EEG sin procesar de cualquier tramo de 10 segundos en el que hagas clic. Puedes comparar canales, ajustar la escala de color, ampliar una parte del registro y exportar el espectrograma como imagen. El visor de SmartTIVA lee el archivo en tu navegador en lugar de subirlo; aun así, utiliza registros anonimizados.</p>
-          <p><a href="https://demo.smarttiva.com/edfviewer/" rel="noopener" target="_blank" data-goatcounter-click="es-edu-tool-edfviewer">Abrir el visor →</a></p>
+    <section class="section-tight edu-path">
+      <div class="container container-narrow">
+        <h2 id="start">Empieza aquí</h2>
+        <article class="step">
+          <span class="tag tag-accent">Empieza aquí</span>
+          <h3>¿Por qué vigilar el cerebro en los niños?</h3>
+          <p class="step-line">La profundidad anestésica varía enormemente entre un paciente de seis meses y un adolescente; el EEG muestra lo que realmente está haciendo el cerebro.</p>
+          <p class="step-watch"><a href="https://www.youtube.com/watch?v=K2dMqs7GfuI" rel="noopener" target="_blank" data-goatcounter-click="es-edu-video-ext-1"><span class="step-thumb"><img src="/assets/images/videos/eeg-for-anesthesia-part-1.jpg" alt="" width="640" height="360" loading="lazy"></span><span class="step-watch-text"><span class="step-prefix">Ver</span> <span class="step-video-title">Introducción&nbsp;↗</span> (en inglés) <span class="step-credit">Canal EEG for Anesthesia · YouTube</span></span><span class="visually-hidden"> (YouTube, se abre en una pestaña nueva)</span></a></p>
+          <ul class="step-chips">
+            <li><a class="chip" href="/es/formacion/tablas/#anesthesia-state"><span class="chip-prefix">Tabla</span> Estado anestésico</a></li>
+            <li><a class="chip" href="https://doi.org/10.1001/jamapediatrics.2025.0514" rel="noopener" target="_blank"><span class="chip-prefix">Leer</span> Kurth 2025&nbsp;↗<span class="visually-hidden"> (página de la editorial, se abre en una pestaña nueva)</span></a></li>
+          </ul>
         </article>
 
-        <p style="font-size: 0.9rem; color: var(--muted); margin-top: 1.5rem;">El orden anterior es solo una sugerencia: el banco de pruebas de artefactos se aprovecha mejor cuando ya se sabe reconocer un trazado normal. SmartTIVA aloja estas simulaciones y el visor, que se abren en una pestaña nueva; PALNET no controla su contenido.</p>
-      </div>
-    </section>
+        <h2 id="read-the-screen">Lee la pantalla</h2>
+        <article class="step step--numbered" id="eeg-basics">
+          <h3>Fundamentos del EEG: la señal y el espectrograma</h3>
+          <p class="step-line">Cómo un trazado de EEG sin procesar se convierte en un espectrograma, y cómo aparecen los artefactos.</p>
+          <p class="step-watch"><a href="https://www.youtube.com/watch?v=Alp7n5IKTmU" rel="noopener" target="_blank" data-goatcounter-click="es-edu-video-ext-2"><span class="step-thumb"><img src="/assets/images/videos/eeg-for-anesthesia-part-2.jpg" alt="" width="640" height="360" loading="lazy"></span><span class="step-watch-text"><span class="step-prefix">Ver</span> <span class="step-video-title">La forma de onda del EEG y el espectrograma&nbsp;↗</span> (en inglés) <span class="step-credit">Canal EEG for Anesthesia · YouTube</span></span><span class="visually-hidden"> (YouTube, se abre en una pestaña nueva)</span></a></p>
+          <div class="step-row" id="simulations">
+            <p class="step-row-lead"><span class="step-prefix">Probar</span> SmartTIVA, entidad colaboradora de PALNET (en inglés)</p>
+            <ul class="step-chips">
+              <li><a class="chip" href="https://demo.smarttiva.com/wavecombinator/" rel="noopener" target="_blank" data-goatcounter-click="es-edu-tool-wavecombinator">Combinador de ondas sinusoidales&nbsp;↗<span class="visually-hidden"> (SmartTIVA, se abre en una pestaña nueva)</span></a></li>
+              <li><a class="chip" href="https://demo.smarttiva.com/rotation3d/" rel="noopener" target="_blank" data-goatcounter-click="es-edu-tool-rotation3d">Cuadrícula giratoria 3D de la DSA&nbsp;↗<span class="visually-hidden"> (SmartTIVA, se abre en una pestaña nueva)</span></a></li>
+              <li><a class="chip" href="https://demo.smarttiva.com/eegsandbox/" rel="noopener" target="_blank" data-goatcounter-click="es-edu-tool-eegsandbox">Banco de pruebas de artefactos, más adelante&nbsp;↗<span class="visually-hidden"> (SmartTIVA, se abre en una pestaña nueva)</span></a></li>            </ul>
+          </div>
+          <ul class="step-chips">
+            <li><a class="chip" href="https://doi.org/10.1097/ALN.0000000000000841" rel="noopener" target="_blank"><span class="chip-prefix">Leer</span> Purdon 2015&nbsp;↗<span class="visually-hidden"> (página de la editorial, se abre en una pestaña nueva)</span></a></li>
+          </ul>
+        </article>
 
-    <section class="section" id="tables">
-      <div class="container">
-        <h2>Tablas de consulta rápida</h2>
-        <p class="lead">Las tablas de consulta rápida de PALNET, pensadas para llevarlas en el móvil o imprimirlas para el quirófano (los PDF y las imágenes descargables están en inglés). Cada una es un recurso didáctico; contrasta siempre la información con los protocolos de tu centro y con las características de cada paciente.</p>
+        <h2 id="signatures">Conoce los patrones</h2>
+        <article class="step step--numbered" id="propofol">
+          <h3>Propofol</h3>
+          <p class="step-line">El patrón del EEG que produce el propofol y las tablas de PALNET de dosificación, objetivos y profundidad.</p>
+          <p class="step-watch"><a href="https://www.youtube.com/watch?v=aceEqoqwugM" rel="noopener" target="_blank" data-goatcounter-click="es-edu-video-ext-3"><span class="step-thumb"><img src="/assets/images/videos/eeg-for-anesthesia-part-3.jpg" alt="" width="640" height="360" loading="lazy"></span><span class="step-watch-text"><span class="step-prefix">Ver</span> <span class="step-video-title">Propofol&nbsp;↗</span> (en inglés) <span class="step-credit">Canal EEG for Anesthesia · YouTube</span></span><span class="visually-hidden"> (YouTube, se abre en una pestaña nueva)</span></a></p>
+          <ul class="step-chips">
+            <li><a class="chip" href="/es/formacion/tablas/#propofol-depth"><span class="chip-prefix">Tabla</span> Profundidad con propofol</a></li>
+            <li><a class="chip" href="https://doi.org/10.1016/j.anclin.2020.06.007" rel="noopener" target="_blank"><span class="chip-prefix">Leer</span> Yuan 2020&nbsp;↗<span class="visually-hidden"> (página de la editorial, se abre en una pestaña nueva)</span></a></li>
+          </ul>
+          <p class="step-note">¿Lactante menor de 3–6 meses o niño sin ondas alfa? <a href="/es/formacion/tablas/#hypnotic-depth-noalpha">Usa la tabla sin alfa →</a></p>
+        </article>
 
-        <div class="ref-grid">
-          <article class="ref-card">
-            <a class="ref-figure" href="/assets/images/tables/propofol-dosing.png" target="_blank" rel="noopener" data-goatcounter-click="es-edu-png-view-propofol-dosing"><img src="/assets/images/tables/propofol-dosing.png" alt="Dosificación de propofol por grupos de edad en pediatría" loading="lazy"></a>
-            <div class="ref-body">
-              <h3>Dosificación de propofol por grupos de edad en pediatría</h3>
-              <p class="ref-meta">Bolo (mg/kg) y velocidades de infusión (µg/kg/min) por grupo de edad y concentración objetivo en el sitio de efecto (Ce, µg/ml), para tres niveles de Ce.</p>
+        <article class="step step--numbered" id="sevoflurane">
+          <h3>Sevoflurano</h3>
+          <p class="step-line">El patrón del EEG que produce el sevoflurano y la tabla de profundidad de PALNET.</p>
+          <p class="step-watch"><a href="https://www.youtube.com/watch?v=wY46TNLYtyw" rel="noopener" target="_blank" data-goatcounter-click="es-edu-video-ext-4"><span class="step-thumb"><img src="/assets/images/videos/eeg-for-anesthesia-part-4.jpg" alt="" width="640" height="360" loading="lazy"></span><span class="step-watch-text"><span class="step-prefix">Ver</span> <span class="step-video-title">Anestésicos inhalados derivados del éter&nbsp;↗</span> (en inglés) <span class="step-credit">Canal EEG for Anesthesia · YouTube</span></span><span class="visually-hidden"> (YouTube, se abre en una pestaña nueva)</span></a></p>
+          <ul class="step-chips">
+            <li><a class="chip" href="/es/formacion/tablas/#sevoflurane-depth"><span class="chip-prefix">Tabla</span> Profundidad con sevoflurano</a></li>
+            <li><a class="chip" href="https://doi.org/10.1111/pan.13579" rel="noopener" target="_blank"><span class="chip-prefix">Leer</span> Rigouzzo 2019&nbsp;↗<span class="visually-hidden"> (página de la editorial, se abre en una pestaña nueva)</span></a></li>
+          </ul>
+          <p class="step-note">¿Lactante menor de 3–6 meses o niño sin ondas alfa? <a href="/es/formacion/tablas/#hypnotic-depth-noalpha">Usa la tabla sin alfa →</a></p>
+        </article>
 
-              <p class="ref-note">Tras una inducción inhalatoria con sevoflurano mediante mascarilla, la dosis en bolo debe administrarse a lo largo de varios minutos, para dejar que descienda la concentración de sevoflurano y prevenir así la hipotensión.</p>
-              <p class="ref-disclaimer"><strong>Referencia exclusivamente didáctica.</strong> Verifica todas las dosis con los protocolos de tu centro, las fuentes farmacológicas actualizadas y las características de cada paciente.</p>
-              <div class="ref-actions"><a class="btn btn-primary" href="/assets/pdfs/propofol-dosing.pdf" target="_blank" rel="noopener" data-goatcounter-click="es-edu-pdf-propofol-dosing">Descargar PDF</a><a class="btn btn-secondary" href="/assets/images/tables/propofol-dosing.png" download data-goatcounter-click="es-edu-png-propofol-dosing">Descargar imagen</a></div>
-              <p class="ref-foot">PALNET &middot; pedseeg.com &middot; Tablas de consulta para el móvil (junio de 2026)</p>
-            </div>
-          </article>
-          <article class="ref-card">
-            <a class="ref-figure" href="/assets/images/tables/propofol-ce-curve.png" target="_blank" rel="noopener" data-goatcounter-click="es-edu-png-view-propofol-ce-curve">
-              <img src="/assets/images/tables/propofol-ce-curve.png" alt="Ce de propofol para anestesia y sedación: concentración en el sitio de efecto a lo largo del tiempo para una Ce objetivo de 3 frente a 4,5, durante el bolo, la infusión de mantenimiento y el despertar" loading="lazy">
-            </a>
-            <div class="ref-body">
-              <h3>Ce de propofol para anestesia y sedación</h3>
-              <p class="ref-meta">Concentración en el sitio de efecto (Ce) a lo largo de una intervención (bolo, infusión de mantenimiento y despertar) para una Ce objetivo de 3 frente a 4,5 &micro;g/ml.</p>
-              <p class="ref-disclaimer"><strong>Referencia exclusivamente didáctica.</strong> Ilustración conceptual; verifica las dosis y los objetivos con los protocolos de tu centro y en función de cada paciente.</p>
-              <div class="ref-actions"><a class="btn btn-primary" href="/assets/pdfs/propofol-ce-curve.pdf" target="_blank" rel="noopener" data-goatcounter-click="es-edu-pdf-propofol-ce-curve">Descargar PDF</a><a class="btn btn-secondary" href="/assets/images/tables/propofol-ce-curve.png" download data-goatcounter-click="es-edu-png-propofol-ce-curve">Descargar imagen</a></div>
-              <p class="ref-foot">PALNET &middot; pedseeg.com &middot; Tablas de consulta para el móvil (junio de 2026)</p>
-            </div>
-          </article>
-          <article class="ref-card">
-            <div class="ref-figure ref-table-wrap"><table class="ref-table"><thead><tr><th>Componente</th><th>Monitor</th><th>Fármacos</th></tr></thead><tbody><tr><td>Hipnosis (inconsciencia)</td><td>EEG</td><td>Sevoflurano, propofol, ketamina, dexmedetomidina</td></tr><tr><td>Antinocicepción (ausencia de dolor)</td><td>FC, PA</td><td>Opioide, sevoflurano, anestesia regional/local, ketamina</td></tr><tr><td>Inmovilidad (ausencia de movimiento)</td><td>Ninguno — TOF</td><td>Sevoflurano, remifentanilo, relajantes musculares</td></tr><tr><td>Amnesia (sin recuerdo intraoperatorio)</td><td>Ninguno</td><td>Los mismos que para la hipnosis</td></tr></tbody></table></div>
-            <div class="ref-body">
-              <h3>Estado anestésico: componentes, monitores y fármacos</h3>
-              <p class="ref-meta">El estado anestésico tiene cuatro componentes; la probabilidad de despertar intraoperatorio se relaciona con la profundidad de la hipnosis.</p>
-              <p class="ref-disclaimer"><strong>Referencia exclusivamente didáctica.</strong> El EEG debe interpretarse siempre en el contexto clínico completo; contrasta la información con los protocolos de tu centro y con las características de cada paciente.</p>
-              <div class="ref-actions"><a class="btn btn-primary" href="/assets/pdfs/anesthesia-state.pdf" target="_blank" rel="noopener" data-goatcounter-click="es-edu-pdf-anesthesia-state">Descargar PDF</a><a class="btn btn-secondary" href="/assets/images/tables/anesthesia-state.png" download data-goatcounter-click="es-edu-png-anesthesia-state">Descargar imagen</a></div>
-              <p class="ref-foot">PALNET &middot; pedseeg.com &middot; Tablas de consulta para el móvil (junio de 2026)</p>
-            </div>
-          </article>
-          <article class="ref-card">
-            <div class="ref-figure ref-table-wrap"><table class="ref-table"><thead><tr><th>Estado clínico</th><th>Ce (µg/ml)</th><th>Patrón de onda / DSA</th><th>SEF</th></tr></thead><tbody><tr><td>vigilia</td><td>&lt;2</td><td>Beta &gt; Alfa</td><td>&gt; 20</td></tr><tr><td>despertar «sedación»</td><td>2</td><td>Beta = Alfa</td><td>17–20</td></tr><tr><td>anestesia «hipnosis»</td><td>3</td><td>Alfa = Delta</td><td>13–16</td></tr><tr><td>anestesia «hipnosis + cierta analgesia»</td><td>4,5</td><td>Delta &gt; Alfa</td><td>9–12</td></tr><tr><td>anestesia «sobredosificación»</td><td>&gt;5</td><td>Delta, isoeléctrico</td><td>&lt;8</td></tr></tbody></table></div>
-            <div class="ref-body">
-              <h3>Parámetros del EEG para la profundidad anestésica con propofol</h3>
-              <p class="ref-meta">Según la concentración en el sitio de efecto (Ce, µg/ml).</p>
-              <p class="ref-disclaimer"><strong>Referencia exclusivamente didáctica.</strong> El EEG debe interpretarse siempre en el contexto clínico completo; contrasta la información con los protocolos de tu centro y con las características de cada paciente.</p>
-              <div class="ref-actions"><a class="btn btn-primary" href="/assets/pdfs/propofol-depth.pdf" target="_blank" rel="noopener" data-goatcounter-click="es-edu-pdf-propofol-depth">Descargar PDF</a><a class="btn btn-secondary" href="/assets/images/tables/propofol-depth.png" download data-goatcounter-click="es-edu-png-propofol-depth">Descargar imagen</a></div>
-              <p class="ref-foot">PALNET &middot; pedseeg.com &middot; Tablas de consulta para el móvil (junio de 2026)</p>
-            </div>
-          </article>
-          <article class="ref-card">
-            <div class="ref-figure ref-table-wrap"><table class="ref-table"><thead><tr><th>Estado clínico</th><th>Patrón de onda / DSA</th><th>SEF</th></tr></thead><tbody><tr><td>vigilia</td><td>Beta &gt; Alfa</td><td>&gt; 20</td></tr><tr><td>despertar «sedación»</td><td>Beta = Alfa</td><td>17–20</td></tr><tr><td>anestesia «hipnosis + analgesia»</td><td>Alfa = (Theta + Delta)</td><td>13–16</td></tr><tr><td>anestesia «hipnosis + antinocicepción»</td><td>(Delta + Theta) &gt; Alfa</td><td>9–12</td></tr><tr><td>anestesia «sobredosificación»</td><td>Delta, isoeléctrico</td><td>&lt;8</td></tr></tbody></table></div>
-            <div class="ref-body">
-              <h3>Parámetros del EEG para la profundidad anestésica con sevoflurano</h3>
+        <article class="step step--numbered" id="ketamine-dexmedetomidine">
+          <h3>Ketamina y dexmedetomidina</h3>
+          <p class="step-line">Los patrones del EEG que producen la ketamina y la dexmedetomidina, con un vídeo para cada fármaco.</p>
+          <p class="step-watch"><a href="https://www.youtube.com/watch?v=SxmRAsEr9DQ" rel="noopener" target="_blank" data-goatcounter-click="es-edu-video-ext-5"><span class="step-thumb"><img src="/assets/images/videos/eeg-for-anesthesia-part-5.jpg" alt="" width="640" height="360" loading="lazy"></span><span class="step-watch-text"><span class="step-prefix">Ver</span> <span class="step-video-title">Ketamina&nbsp;↗</span> (en inglés) <span class="step-credit">Canal EEG for Anesthesia · YouTube</span></span><span class="visually-hidden"> (YouTube, se abre en una pestaña nueva)</span></a></p>
+          <p class="step-watch"><a href="https://www.youtube.com/watch?v=jetNwvJd-Hw" rel="noopener" target="_blank" data-goatcounter-click="es-edu-video-ext-6"><span class="step-thumb"><img src="/assets/images/videos/eeg-for-anesthesia-part-6.jpg" alt="" width="640" height="360" loading="lazy"></span><span class="step-watch-text"><span class="step-prefix">Ver</span> <span class="step-video-title">Dexmedetomidina&nbsp;↗</span> (en inglés) <span class="step-credit">Canal EEG for Anesthesia · YouTube</span></span><span class="visually-hidden"> (YouTube, se abre en una pestaña nueva)</span></a></p>
+          <ul class="step-chips">
+            <li><a class="chip" href="https://doi.org/10.1213/ANE.0000000000005361" rel="noopener" target="_blank"><span class="chip-prefix">Leer</span> Moody 2021&nbsp;↗<span class="visually-hidden"> (página de la editorial, se abre en una pestaña nueva)</span></a></li>
+          </ul>
+        </article>
 
-              <p class="ref-disclaimer"><strong>Referencia exclusivamente didáctica.</strong> El EEG debe interpretarse siempre en el contexto clínico completo; contrasta la información con los protocolos de tu centro y con las características de cada paciente.</p>
-              <div class="ref-actions"><a class="btn btn-primary" href="/assets/pdfs/sevoflurane-depth.pdf" target="_blank" rel="noopener" data-goatcounter-click="es-edu-pdf-sevoflurane-depth">Descargar PDF</a><a class="btn btn-secondary" href="/assets/images/tables/sevoflurane-depth.png" download data-goatcounter-click="es-edu-png-sevoflurane-depth">Descargar imagen</a></div>
-              <p class="ref-foot">PALNET &middot; pedseeg.com &middot; Tablas de consulta para el móvil (junio de 2026)</p>
-            </div>
-          </article>
-          <article class="ref-card">
-            <div class="ref-figure ref-table-wrap"><table class="ref-table"><thead><tr><th>Estado clínico</th><th>Patrón de onda / DSA</th><th>SEF</th></tr></thead><tbody><tr><td>vigilia</td><td>Beta &gt; Alfa</td><td>&gt; 20</td></tr><tr><td>despertar «sedación»</td><td>Beta = Alfa</td><td>17–20</td></tr><tr><td>anestesia «hipnosis» (prop)<br>+ «analgesia» (sevo)</td><td>Alfa = Delta (prop)<br>Alfa = Theta + Delta (sevo)</td><td>13–16</td></tr><tr><td>anestesia +<br>«analgesia» (prop)<br>«antinocicepción» (sevo)</td><td>Delta &gt; alfa (prop)<br>(Delta + Theta) &gt; Alfa (sevo)</td><td>9–12</td></tr><tr><td>anestesia «sobredosificación»</td><td>Delta, isoeléctrico</td><td>&lt;8</td></tr></tbody></table></div>
-            <div class="ref-body">
-              <h3>Parámetros del EEG: profundidad hipnótica</h3>
-              <p class="ref-meta">Edad &gt; 3 meses, con ondas alfa-beta.</p>
-              <p class="ref-disclaimer"><strong>Referencia exclusivamente didáctica.</strong> El EEG debe interpretarse siempre en el contexto clínico completo; contrasta la información con los protocolos de tu centro y con las características de cada paciente.</p>
-              <div class="ref-actions"><a class="btn btn-primary" href="/assets/pdfs/hypnotic-depth-alpha.pdf" target="_blank" rel="noopener" data-goatcounter-click="es-edu-pdf-hypnotic-depth-alpha">Descargar PDF</a><a class="btn btn-secondary" href="/assets/images/tables/hypnotic-depth-alpha.png" download data-goatcounter-click="es-edu-png-hypnotic-depth-alpha">Descargar imagen</a></div>
-              <p class="ref-foot">PALNET &middot; pedseeg.com &middot; Tablas de consulta para el móvil (junio de 2026)</p>
-            </div>
-          </article>
-          <article class="ref-card">
-            <div class="ref-figure ref-table-wrap"><table class="ref-table"><thead><tr><th>Estado clínico</th><th>Patrón de onda / DSA</th><th>SEF</th></tr></thead><tbody><tr><td>vigilia</td><td>Delta + Theta</td><td>5–8</td></tr><tr><td>despertar «sedación»</td><td>Delta</td><td>3–5</td></tr><tr><td>anestesia «hipnosis + analgesia»</td><td>Theta + Delta = Isoeléctrico</td><td>1–3</td></tr><tr><td>anestesia «hipnosis + antinocicepción»</td><td>Isoeléctrico &gt; Delta + Theta</td><td>0–2</td></tr><tr><td>anestesia «sobredosificación»</td><td>Isoeléctrico</td><td>0</td></tr></tbody></table></div>
-            <div class="ref-body">
-              <h3>Parámetros del EEG: profundidad hipnótica</h3>
-              <p class="ref-meta">Edad &lt; 3–6 meses, o pacientes de más edad sin ondas alfa-beta (síndromes genéticos, retraso del neurodesarrollo, cardiopatía congénita cianótica).</p>
-              <p class="ref-disclaimer"><strong>Referencia exclusivamente didáctica.</strong> El EEG debe interpretarse siempre en el contexto clínico completo; contrasta la información con los protocolos de tu centro y con las características de cada paciente.</p>
-              <div class="ref-actions"><a class="btn btn-primary" href="/assets/pdfs/hypnotic-depth-noalpha.pdf" target="_blank" rel="noopener" data-goatcounter-click="es-edu-pdf-hypnotic-depth-noalpha">Descargar PDF</a><a class="btn btn-secondary" href="/assets/images/tables/hypnotic-depth-noalpha.png" download data-goatcounter-click="es-edu-png-hypnotic-depth-noalpha">Descargar imagen</a></div>
-              <p class="ref-foot">PALNET &middot; pedseeg.com &middot; Tablas de consulta para el móvil (junio de 2026)</p>
-            </div>
-          </article>
-          <article class="ref-card">
-            <div class="ref-figure ref-algo-wrap"><div class="ref-algo"><div class="ref-algo-step"><div class="ref-algo-q">¿Duración de la cirugía?</div><div class="ref-algo-branches"><div class="ref-algo-branch"><b>&gt; 2 h</b>Ce 3</div><div class="ref-algo-branch"><b>&lt; 2 h</b>Ce 4,5</div></div></div><div class="ref-algo-step"><div class="ref-algo-q">¿Estímulo quirúrgico / dolor?</div><div class="ref-algo-branches"><div class="ref-algo-branch"><b>intenso</b>Ce 3 + remifentanilo / anestesia regional</div><div class="ref-algo-branch"><b>leve</b>Ce 4,5 + fentanilo / anestesia local</div></div></div><div class="ref-algo-step"><div class="ref-algo-q">¿Se necesita inmovilidad absoluta?</div><div class="ref-algo-branches"><div class="ref-algo-branch"><b>sí</b>Ce 3 + relajante muscular</div><div class="ref-algo-branch"><b>no</b>Ce 3 o 4,5</div></div></div></div></div>
-            <div class="ref-body">
-              <h3>Algoritmo: cómo elegir la Ce objetivo de propofol (3 frente a 4,5 µg/ml)</h3>
-              <p class="ref-meta">Una ayuda rápida para decidir la concentración objetivo de propofol en el sitio de efecto.</p>
-              <p class="ref-disclaimer"><strong>Referencia exclusivamente didáctica.</strong> El EEG debe interpretarse siempre en el contexto clínico completo; contrasta la información con los protocolos de tu centro y con las características de cada paciente.</p>
-              <div class="ref-actions"><a class="btn btn-primary" href="/assets/pdfs/propofol-ce-algorithm.pdf" target="_blank" rel="noopener" data-goatcounter-click="es-edu-pdf-propofol-ce-algorithm">Descargar PDF</a><a class="btn btn-secondary" href="/assets/images/tables/propofol-ce-algorithm.png" download data-goatcounter-click="es-edu-png-propofol-ce-algorithm">Descargar imagen</a></div>
-              <p class="ref-foot">PALNET &middot; pedseeg.com &middot; Tablas de consulta para el móvil (junio de 2026)</p>
-            </div>
-          </article>
+        <article class="step step--numbered" id="age">
+          <h3>Edad: el EEG del recién nacido al adolescente</h3>
+          <p class="step-line">Qué tabla de profundidad de PALNET corresponde a cada niño, y un artículo sobre cómo cambia el EEG con la edad.</p>
+          <ul class="step-chips">
+            <li><a class="chip" href="/es/formacion/tablas/#hypnotic-depth-alpha"><span class="chip-prefix">Tabla</span> Con alfa</a></li>
+            <li><a class="chip" href="https://doi.org/10.1097/ALN.0000000000001717" rel="noopener" target="_blank"><span class="chip-prefix">Leer</span> Lee 2017&nbsp;↗<span class="visually-hidden"> (página de la editorial, se abre en una pestaña nueva)</span></a></li>
+          </ul>
+        </article>
+
+        <h2 id="decide">Decide en el quirófano</h2>
+        <article class="step step--numbered" id="maintenance">
+          <h3>Mantenimiento: elegir la profundidad y sostenerla</h3>
+          <p class="step-line">La ayuda de decisión de PALNET para elegir la Ce objetivo de propofol y las tablas para mantener la profundidad elegida.</p>
+          <ul class="step-chips">
+            <li><a class="chip" href="/es/formacion/tablas/#propofol-ce-algorithm"><span class="chip-prefix">Tabla</span> Ce objetivo</a></li>
+            <li><a class="chip" href="https://doi.org/10.1001/jamapediatrics.2025.0517" rel="noopener" target="_blank"><span class="chip-prefix">Leer</span> Miyasaka 2025&nbsp;↗<span class="visually-hidden"> (página de la editorial, se abre en una pestaña nueva)</span></a></li>
+          </ul>
+        </article>
+
+        <article class="step step--in-person" id="in-person">
+          <h3>Después: apréndelo en el quirófano con un profesor de PALNET</h3>
+          <p class="step-line">Una visita de PALNET lleva a tu centro dos días de enseñanza en el quirófano basada en casos, seguidos de una mentoría continuada.</p>
+          <p class="hero-cta">
+            <a class="btn btn-primary" href="/es/eventos/#request">Solicitar una visita</a>
+            <a class="btn btn-ghost" href="/es/eventos/">Ver los próximos talleres</a>
+          </p>
+        </article>
+
+        <h2 id="more">Otras formas de acceder</h2>
+        <div class="door" id="tables">
+          <h3><a href="/es/formacion/tablas/">Tablas de consulta rápida →</a></h3>
+          <ul class="step-chips">
+            <li><a class="chip" href="/es/formacion/tablas/#propofol-depth">Profundidad con propofol</a></li>
+            <li><a class="chip" href="/es/formacion/tablas/#sevoflurane-depth">Profundidad con sevoflurano</a></li>
+            <li><a class="chip" href="/es/formacion/tablas/#hypnotic-depth-alpha">Con alfa</a></li>
+            <li><a class="chip" href="/es/formacion/tablas/#hypnotic-depth-noalpha">Sin alfa</a></li>
+            <li><a class="chip" href="/es/formacion/tablas/#propofol-dosing">Dosificación</a></li>
+            <li><a class="chip" href="/es/formacion/tablas/#propofol-ce-curve">Ce durante la intervención</a></li>
+            <li><a class="chip" href="/es/formacion/tablas/#propofol-ce-algorithm">Ce objetivo</a></li>
+            <li><a class="chip" href="/es/formacion/tablas/#anesthesia-state">Estado anestésico</a></li>
+          </ul>
         </div>
-      </div>
-    </section>
+        <div class="door" id="literature">
+          <h3><a href="/es/formacion/biblioteca/">Biblioteca de artículos →</a></h3>
+          <p>Artículos revisados por los profesores de PALNET, por temas</p>
+        </div>
+        <p class="door-line">¿Tienes tus propios registros anonimizados? <a href="https://demo.smarttiva.com/edfviewer/" rel="noopener" target="_blank" data-goatcounter-click="es-edu-tool-edfviewer">Visor de EDF de SmartTIVA&nbsp;↗<span class="visually-hidden"> (SmartTIVA, se abre en una pestaña nueva)</span></a> (en inglés)</p>
 
-    <section class="section section-accent" id="literature">
-      <div class="container">
-        <h2>Bibliografía científica</h2>
-        <p class="lead">La lista oficial de lecturas de PALNET, seleccionada y revisada por los profesores de PALNET y utilizada durante el último año. Estos artículos se citan con frecuencia en las propias publicaciones de PALNET. Las referencias enlazan con la página de la editorial (DOI) cuando está disponible; los artículos están en inglés.</p>
-
-        <div class="lit-subcat">Por qué la anestesia guiada por EEG</div>
-        <ul class="reading-list">
-          <li>Morgan PG, Sleigh JW. Are We Anesthetizing the Heart or the Brain (or Ourselves)? <em>Anesthesiology</em> 2025;143:491&ndash;2. &middot; <a href="https://doi.org/10.1097/ALN.0000000000005609" rel="noopener" target="_blank">DOI</a></li>
-          <li>Moody OA, et al. The Neural Circuits Underlying General Anesthesia and Sleep. <em>Anesthesia &amp; Analgesia</em> 2021;132(5):1254&ndash;1264. &middot; <a href="https://doi.org/10.1213/ANE.0000000000005361" rel="noopener" target="_blank">DOI</a></li>
-        </ul>
-
-        <div class="lit-subcat">Revisiones sobre EEG en anestesia</div>
-        <ul class="reading-list">
-          <li>Purdon PL, et al. Clinical Electroencephalography for Anesthesiologists. Part I: Background and Basic Signatures. <em>Anesthesiology</em> 2015;123:937&ndash;60. &middot; <a href="https://doi.org/10.1097/ALN.0000000000000841" rel="noopener" target="_blank">DOI</a></li>
-          <li>Guay CS, et al. Clinical Electroencephalography for Anesthesiologists and Intensivists. Part 2: Physiologic Signatures and Active Management. <em>Anesthesiology</em> 2025;143(6):1595&ndash;1618. &middot; <a href="https://doi.org/10.1097/ALN.0000000000005739" rel="noopener" target="_blank">DOI</a></li>
-          <li>Constant I, Sabourdin N. Monitoring depth of anesthesia: from consciousness to nociception. A window on subcortical brain activity. <em>Paediatric Anaesthesia</em> 2015;25(1):73&ndash;82. &middot; <a href="https://doi.org/10.1111/pan.12586" rel="noopener" target="_blank">DOI</a></li>
-        </ul>
-
-        <div class="lit-subcat">Revisiones sobre anestesia pediátrica guiada por EEG</div>
-        <ul class="reading-list">
-          <li>Bong CL, Yuan I. The Utility of Electroencephalography in Guiding General Anesthesia in Children. <em>Anesthesia &amp; Analgesia</em> 2026;142(6):1155&ndash;1168. &middot; <a href="https://doi.org/10.1213/ANE.0000000000007230" rel="noopener" target="_blank">DOI</a></li>
-          <li>Constant I, Sabourdin N. The EEG signal: a window on the cortical brain activity. <em>Pediatric Anesthesia</em> 2012;22:539&ndash;552. &middot; <a href="https://doi.org/10.1111/j.1460-9592.2012.03883.x" rel="noopener" target="_blank">DOI</a></li>
-          <li>Yuan I, et al. Using Electroencephalography (EEG) to Guide Propofol and Sevoflurane Dosing in Pediatric Anesthesia. <em>Anesthesiology Clinics</em> 2020;38(3):709&ndash;725. &middot; <a href="https://doi.org/10.1016/j.anclin.2020.06.007" rel="noopener" target="_blank">DOI</a></li>
-          <li>Bong CL, et al. A Narrative Review Illustrating the Clinical Utility of Electroencephalogram-Guided Anesthesia Care in Children. <em>Anesthesia &amp; Analgesia</em> 2023;137:108&ndash;23. &middot; <a href="https://doi.org/10.1213/ANE.0000000000006267" rel="noopener" target="_blank">DOI</a></li>
-          <li>Yuan I, et al. Intraoperative pediatric electroencephalography monitoring: an updated review. <em>Korean Journal of Anesthesiology</em> 2024;77(3):289&ndash;305. &middot; <a href="https://doi.org/10.4097/kja.23843" rel="noopener" target="_blank">DOI</a></li>
-        </ul>
-
-        <div class="lit-subcat">Influencia de la edad en el EEG</div>
-        <ul class="reading-list">
-          <li>Akeju O, et al. Age-dependency of sevoflurane-induced electroencephalogram dynamics in children. <em>British Journal of Anaesthesia</em> 2015;115 Suppl 1:i66&ndash;i76. &middot; <a href="https://doi.org/10.1093/bja/aev114" rel="noopener" target="_blank">DOI</a></li>
-          <li>Lee JM, et al. A Prospective Study of Age-dependent Changes in Propofol-induced Electroencephalogram Oscillations in Children. <em>Anesthesiology</em> 2017;127:293&ndash;306. &middot; <a href="https://doi.org/10.1097/ALN.0000000000001717" rel="noopener" target="_blank">DOI</a></li>
-          <li>Schultz B, et al. EEG monitoring during anesthesia in children aged 0 to 18 months: amplitude-integrated EEG and age effects. <em>BMC Pediatrics</em> 2022;22:156. &middot; <a href="https://doi.org/10.1186/s12887-022-03180-x" rel="noopener" target="_blank">DOI</a></li>
-          <li>Yuan I, et al. Quantitative electroencephalogram in term neonates under different sleep states. <em>Journal of Clinical Monitoring and Computing</em> 2024;38(3):591&ndash;602. &middot; <a href="https://doi.org/10.1007/s10877-023-01082-6" rel="noopener" target="_blank">DOI</a></li>
-          <li>Markus M, et al. Peri- and intraoperative EEG signatures in newborns and infants. <em>Clinical Neurophysiology</em> 2021;132:2959&ndash;64. &middot; <a href="https://doi.org/10.1016/j.clinph.2021.09.005" rel="noopener" target="_blank">DOI</a></li>
-        </ul>
-
-        <div class="lit-subcat">Seguridad y resultados</div>
-        <ul class="reading-list">
-          <li>Kurth CD, et al. EEG-Guided Pediatric Anesthesia &mdash; A Quality Innovation? <em>JAMA Pediatrics</em> 2025;179(7):695&ndash;697. &middot; <a href="https://doi.org/10.1001/jamapediatrics.2025.0514" rel="noopener" target="_blank">DOI</a></li>
-          <li>Miyasaka KW, et al. EEG-guided titration of sevoflurane and pediatric anesthesia emergence delirium: a randomized clinical trial. <em>JAMA Pediatrics</em> 2025;179(7):704&ndash;712. &middot; <a href="https://doi.org/10.1001/jamapediatrics.2025.0517" rel="noopener" target="_blank">DOI</a></li>
-          <li>Frelich M, et al. Effect of BIS-guided anesthesia on emergence delirium following general anesthesia in children: a prospective randomized controlled trial. <em>Anaesthesia Critical Care &amp; Pain Medicine</em> 2024;43(1):101318. &middot; <a href="https://doi.org/10.1016/j.accpm.2023.101318" rel="noopener" target="_blank">DOI</a></li>
-          <li>Han Y, et al. EEG-parameter-guided anesthesia for prevention of emergence delirium in children. <em>Brain Sciences</em> 2022;12(9):1195. &middot; <a href="https://doi.org/10.3390/brainsci12091195" rel="noopener" target="_blank">DOI</a></li>
-          <li>Yuan I, et al. Isoelectric Electroencephalography in Infants and Toddlers during Anesthesia for Surgery: An International Observational Study. <em>Anesthesiology</em> 2022;137(2):187&ndash;200. &middot; <a href="https://doi.org/10.1097/ALN.0000000000004262" rel="noopener" target="_blank">DOI</a></li>
-          <li>Shen F, et al. Effect of Intravenous, Inhalational, or Combined Anesthesia Maintenance on Postoperative Respiratory Adverse Events in Children Undergoing Adenotonsillectomy (AmPRAEC): A Multicenter Randomized Clinical Trial. <em>Anesthesiology</em> 2025;143:1484&ndash;96. &middot; <a href="https://doi.org/10.1097/ALN.0000000000005707" rel="noopener" target="_blank">DOI</a></li>
-        </ul>
-
-        <div class="lit-subcat">Costes y sostenibilidad</div>
-        <ul class="reading-list">
-          <li>Weber F, et al. The impact of Narcotrend EEG-guided propofol administration on the speed of recovery from pediatric procedural sedation &mdash; a randomized controlled trial. <em>Paediatric Anaesthesia</em> 2018;28(5):443&ndash;449. &middot; <a href="https://doi.org/10.1111/pan.13365" rel="noopener" target="_blank">DOI</a></li>
-          <li>Kurth CD, et al. Multi-site analysis of annual cost and sustainability for EEG-guided pediatric anesthesia. <em>Society for Pediatric Anesthesia abstract</em> 2026.</li>
-        </ul>
-
-        <div class="lit-subcat">Anestesia total intravenosa (TIVA) en pediatría</div>
-        <ul class="reading-list">
-          <li>Patak LS, Puglia M, Hansen EE, Chiem JL, Gordon DW. Propofol or Sevoflurane for Maintenance of Pediatric Anesthesia: An Outcome-Focused Perspective. <em>Anesthesia &amp; Analgesia</em> 2026;143(4):773–780. &middot; <a href="https://doi.org/10.1213/ANE.0000000000008122" rel="noopener" target="_blank">DOI</a></li>
-          <li>Anderson BJ, Bagshaw O. Practicalities of Total Intravenous Anesthesia and Target-controlled Infusion in Children. <em>Anesthesiology</em> 2019;131(1):164&ndash;185. &middot; <a href="https://doi.org/10.1097/ALN.0000000000002657" rel="noopener" target="_blank">DOI</a></li>
-          <li>Yuan I, et al. Electroencephalographic Indices for Clinical Endpoints during Propofol Anesthesia in Infants: An Early-phase Propofol Biomarker-finding Study. <em>Anesthesiology</em> 2024;141:353&ndash;64. &middot; <a href="https://doi.org/10.1097/ALN.0000000000005043" rel="noopener" target="_blank">DOI</a></li>
-          <li>Xu T, et al. An approach to using pharmacokinetics and electroencephalography for propofol anesthesia for surgery in infants. <em>Pediatric Anesthesia</em> 2020;30:1299&ndash;1307. &middot; <a href="https://doi.org/10.1111/pan.14021" rel="noopener" target="_blank">DOI</a></li>
-          <li>Rigby-Jones AE, et al. Remifentanil-midazolam sedation for paediatric patients receiving mechanical ventilation after cardiac surgery. <em>British Journal of Anaesthesia</em> 2007;99(2):252&ndash;61. &middot; <a href="https://doi.org/10.1093/bja/aem135" rel="noopener" target="_blank">DOI</a></li>
-        </ul>
-
-        <div class="lit-subcat">Sevoflurano en pediatría</div>
-        <ul class="reading-list">
-          <li>Rigouzzo A, et al. EEG profiles during general anesthesia in children: a comparative study between sevoflurane and propofol. <em>Pediatric Anesthesia</em> 2019;29:250&ndash;257. &middot; <a href="https://doi.org/10.1111/pan.13579" rel="noopener" target="_blank">DOI</a></li>
-          <li>Karam C, et al. Respiratory Adverse Events After LMA Mask Removal in Children: A Randomized Trial Comparing Propofol to Sevoflurane. <em>Anesthesia &amp; Analgesia</em> 2023;136:25&ndash;33. &middot; <a href="https://doi.org/10.1213/ANE.0000000000005945" rel="noopener" target="_blank">DOI</a></li>
-        </ul>
-
-        <p style="margin-top: 2.5rem; font-size: 0.92rem; color: var(--muted);">PALNET enlaza con las páginas oficiales de las editoriales en lugar de alojar directamente los PDF, de acuerdo con las licencias de publicación académica. Si un artículo está disponible en acceso abierto a través de la revista o de PubMed Central, el enlace DOI te llevará automáticamente a esa versión.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container container-narrow text-center">
-        <h2>¿Deseas formación práctica?</h2>
-        <p class="lead">Una visita de PALNET lleva a tu centro dos días de enseñanza en el quirófano basada en casos, seguidos de una mentoría continuada.</p>
-        <p>
-          <a class="btn btn-primary" href="/es/eventos/#request">Solicitar una visita</a>
-          <a class="btn btn-ghost" href="/es/eventos/" style="margin-left: 0.5rem;">Ver los próximos talleres</a>
-        </p>
+        <details class="edu-about">
+          <summary>Sobre estos materiales</summary>
+          <p>PALNET recomienda los vídeos marcados como «Canal EEG for Anesthesia», pero no los ha realizado.</p>
+          <p>Las herramientas interactivas las desarrolla y aloja <a href="/es/colaboradores/">SmartTIVA</a>, entidad colaboradora de PALNET. Se abren en el sitio web de SmartTIVA, y PALNET no controla su contenido.</p>
+          <p>Las tablas de PALNET son referencias didácticas; cada una lleva su propia advertencia y la fecha de su versión.</p>
+          <p>Las páginas de PALNET no requieren ninguna cuenta. GoatCounter contabiliza, sin cookies, las visitas a las páginas, los clics en los enlaces y las descargas. La fuente tipográfica del sitio se carga desde Google Fonts.</p>
+          <p>Los vídeos, los PDF y los artículos están en inglés.</p>
+        </details>
       </div>
     </section>
   </main>
