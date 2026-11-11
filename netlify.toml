@@ -39,3 +39,8 @@
   for = "/assets/images/*"
   [headers.values]
     Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/assets/images/tables/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

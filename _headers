@@ -12,3 +12,6 @@
 
 /assets/images/*
   Cache-Control: public, max-age=86400
+
+/assets/images/tables/*
+  Cache-Control: public, max-age=0, must-revalidate

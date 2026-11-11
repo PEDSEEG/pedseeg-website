@@ -65,6 +65,38 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pedseeg.com/education/"/>
   </url>
   <url>
+    <loc>https://pedseeg.com/education/tables/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pedseeg.com/education/tables/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pedseeg.com/es/formacion/tablas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pedseeg.com/education/tables/"/>
+  </url>
+  <url>
+    <loc>https://pedseeg.com/es/formacion/tablas/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pedseeg.com/education/tables/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pedseeg.com/es/formacion/tablas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pedseeg.com/education/tables/"/>
+  </url>
+  <url>
+    <loc>https://pedseeg.com/education/library/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pedseeg.com/education/library/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pedseeg.com/es/formacion/biblioteca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pedseeg.com/education/library/"/>
+  </url>
+  <url>
+    <loc>https://pedseeg.com/es/formacion/biblioteca/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pedseeg.com/education/library/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pedseeg.com/es/formacion/biblioteca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pedseeg.com/education/library/"/>
+  </url>
+  <url>
     <loc>https://pedseeg.com/cases/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
