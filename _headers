@@ -10,7 +10,16 @@
 /assets/js/*
   Cache-Control: public, max-age=0, must-revalidate
 
-/assets/images/*
+/assets/images/committee/*
+  Cache-Control: public, max-age=86400
+
+/assets/images/sponsors/*
+  Cache-Control: public, max-age=86400
+
+/assets/images/videos/*
+  Cache-Control: public, max-age=86400
+
+/assets/images/logo.jpg
   Cache-Control: public, max-age=86400
 
 /assets/images/tables/*

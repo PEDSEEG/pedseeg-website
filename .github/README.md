@@ -100,7 +100,13 @@ A new page also needs its own title, meta description and og tags, reciprocal `h
 - the English pages with the browser language set to Spanish first, so the Spanish-offer banner shows;
 - the Spanish pages.
 
-The hub's `<main>` must be 4,220 px tall or less (five 844 px screens) in both languages, and no page may scroll sideways.
+The hub's `<main>` must be 4,220 px tall or less (five 844 px screens) in both languages, and no page may scroll sideways. The Tables and Library pages have no limit; their heights are recorded so that growth shows up.
+
+| `<main>` height (px), 390×844 / 375×667 | English | Spanish |
+|---|---|---|
+| Hub | 3,800 / 3,929 | 4,049 / 4,158 |
+| Tables | 7,268 / 7,423 | 7,904 / 8,628 |
+| Library | 5,863 / 6,026 | 6,019 / 6,206 |
 
 **Unapproved content stays off GitHub and Netlify.** The repository, its pull requests and its deploy previews are all public. Content that has not been approved never goes on a branch, a deploy preview, a branch name, a commit message, a PR title or body, or a preview comment. Commit it only after it has been approved.
 

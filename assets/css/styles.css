@@ -895,6 +895,13 @@ hr {
 .ref-table thead th { background: var(--accent); color: #fff; font-weight: 600; }
 .ref-table tbody tr:nth-child(even) { background: var(--paper-tint); }
 .ref-table td:first-child { font-weight: 600; color: var(--ink); }
+/* SEF ranges in the depth tables stay on one line; on small phones each table fits its card */
+#depth + .ref-grid .ref-table tr > :last-child { white-space: nowrap; }
+@media (max-width: 419.98px) {
+  .ref-table-wrap { padding: 0.5rem; }
+  .ref-table th, .ref-table td { padding: 0.35rem 0.4rem; }
+  .ref-table td:first-child { -webkit-hyphens: auto; hyphens: auto; }
+}
 .ref-algo-wrap { padding: 0.25rem; }
 .ref-algo { display: flex; flex-direction: column; gap: 0.6rem; }
 .ref-algo-q { font-weight: 700; text-align: center; background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 0.3rem 0.7rem; font-size: 0.84rem; }
@@ -908,7 +915,7 @@ hr {
 .ref-note { font-size: 0.88rem; font-style: italic; color: var(--ink-soft); border-left: 3px solid var(--accent); padding-left: 0.75rem; margin: 0 0 0.85rem; }
 .ref-disclaimer { font-size: 0.82rem; color: #92400e; background: var(--warm-soft); border: 1px solid #fde68a; border-radius: var(--radius); padding: 0.6rem 0.8rem; margin: 0 0 1rem; }
 .ref-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.9rem; }
-.ref-actions .btn { padding: 0.55rem 1rem; font-size: 0.92rem; }
+.ref-actions .btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0.55rem 1rem; font-size: 0.92rem; }
 .ref-foot { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0; }
 /* Tables page: the title and meta line come first, then the table, then the card's own notes */
 .ref-head { padding: 1.15rem 1.4rem 0.9rem; }
@@ -946,7 +953,7 @@ main { counter-reset: step; }
 }
 .page-header .edu-hero-cta { margin-top: 1rem; }
 .page-header .edu-or-line { margin-top: 0.75rem; font-size: 0.95rem; }
-.edu-or-line a { font-weight: 600; }
+.edu-or-line a { font-weight: 600; white-space: nowrap; }
 
 /* The path map */
 .path-card {
@@ -981,7 +988,6 @@ main { counter-reset: step; }
 }
 .path-card a::before { content: "▸"; color: var(--accent); flex: 0 0 auto; }
 .path-card a:hover { color: var(--accent); }
-.path-time { margin-left: auto; padding-left: 0.5rem; font-size: 0.8rem; font-weight: 500; color: var(--muted); white-space: nowrap; }
 .page-header .path-note { margin: 0.75rem 0 0; font-size: 0.93rem; color: var(--muted); }
 
 /* Stages and step cards */
@@ -1023,7 +1029,7 @@ main { counter-reset: step; }
   color: var(--accent);
 }
 .step-watch { margin: 0 0 0.6rem; }
-.step-watch a { display: flex; align-items: center; gap: 0.7rem; color: var(--ink); text-decoration: none; }
+.step-watch a { display: flex; align-items: center; gap: 0.7rem; min-height: 44px; color: var(--ink); text-decoration: none; }
 .step-thumb {
   position: relative;
   flex: 0 0 96px;
@@ -1060,6 +1066,7 @@ main { counter-reset: step; }
 .step-row { margin: 0 0 0.6rem; }
 .step-row-lead { font-size: 0.88rem; color: var(--ink-soft); margin: 0 0 0.4rem; }
 .step-row-lead .step-prefix { margin-right: 0.35rem; }
+.step-lang { font-size: 0.84rem; color: var(--muted); }
 
 /* Chips: at least 44 px tall, wrapping */
 .step-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem 0.35rem; }
@@ -1108,10 +1115,8 @@ main { counter-reset: step; }
 .door h3 a:hover { text-decoration: underline; }
 .door p { margin: 0; font-size: 0.95rem; color: var(--ink-soft); }
 .door-line { font-size: 0.95rem; color: var(--ink-soft); margin: 0 0 1rem; }
-@media (min-width: 640px) {
-  .door .step-chips { display: grid; grid-template-columns: 1fr 1fr; }
-  .door .chip { width: 100%; }
-}
+.door .step-chips { display: grid; grid-template-columns: 1fr 1fr; }
+.door .chip { width: 100%; }
 .edu-about { margin-top: 1.5rem; border-top: 1px solid var(--border); padding-top: 1rem; }
 .edu-about summary { cursor: pointer; font-weight: 600; color: var(--ink-soft); min-height: 44px; display: flex; align-items: center; list-style: none; }
 .edu-about summary::-webkit-details-marker { display: none; }
@@ -1120,6 +1125,29 @@ main { counter-reset: step; }
 .edu-about[open] summary { margin-bottom: 0.5rem; }
 .edu-about p { font-size: 0.93rem; color: var(--ink-soft); }
 
+/* Phones: tighter spacing and two chips per row keep the hub within its phone-length budget */
+@media (max-width: 719.98px) {
+  .page-header--compact { padding: 1.25rem 0 1rem; }
+  .page-header--compact .eyebrow { margin-bottom: 0.6rem; }
+  .page-header--compact h1 { font-size: 1.75rem; }
+  .page-header .edu-hero-cta { margin-top: 0.85rem; }
+  .page-header .edu-or-line { margin-top: 0.5rem; }
+  .edu-hero { gap: 1rem; }
+  .page-header .path-note { margin-top: 0.6rem; }
+  .edu-path { padding: 1.25rem 0 1rem; }
+  .edu-path h2 { margin: 1.4rem 0 0.55rem; }
+  .step { padding: 0.8rem 0.7rem 0.85rem; margin-bottom: 0.7rem; }
+  .step-line, .step-note, .page-header .path-note, .door p, .door-line { line-height: 1.45; }
+  .step-line { margin-bottom: 0.5rem; }
+  .step-watch { margin-bottom: 0.45rem; }
+  .step .step-chips { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .step .step-chips li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .step .step-chips li:not(:last-child:nth-child(odd)) .chip { width: 100%; height: 100%; }
+  .step .chip, .door .chip { border-radius: 14px; }
+  .door { padding: 0.85rem 0.9rem 0.95rem; margin-bottom: 0.8rem; }
+  .edu-about { margin-top: 1rem; }
+}
+
 /* Education bar: Learning path · Tables · Library (in the page, not sticky) */
 .edu-bar { background: var(--paper); border-bottom: 1px solid var(--border); }
 .edu-bar ul { list-style: none; margin: 0; padding: 0.2rem 0; display: flex; flex-wrap: wrap; gap: 0.25rem; }
@@ -1127,7 +1155,7 @@ main { counter-reset: step; }
 .edu-bar a {
   display: inline-flex;
   align-items: center;
-  min-height: 40px;
+  min-height: 44px;
   padding: 0 0.8rem;
   border-radius: 999px;
   font-size: 0.92rem;
