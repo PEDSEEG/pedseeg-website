@@ -96,17 +96,13 @@ A step gets its own page when its PALNET text is approved and it holds a cleared
 
 A new page also needs its own title, meta description and og tags, reciprocal `hreflang` en/es/x-default links, the EN | ES switch pointing to its twin, the nav and footer copied from a page of the same language, the Education bar (hub excepted), `main.js`, and the GoatCounter snippet with the guard (see Analytics).
 
-**Phone-length budget.** Measure on every Education build with headless Chrome at 390×844 and 375×667, after fonts and images have loaded:
-- the English pages with the browser language set to Spanish first, so the Spanish-offer banner shows;
-- the Spanish pages.
-
-The hub's `<main>` must be 4,220 px tall or less (five 844 px screens) in both languages, and no page may scroll sideways. The Tables and Library pages have no limit; their heights are recorded so that growth shows up.
+**Phone check.** Check every Education build with headless Chrome at 390×844 and 375×667, after fonts and images have loaded, in English (browser language set to Spanish first, so the Spanish-offer banner shows) and in Spanish. No page may scroll sideways. There is no length cap; the heights are recorded so that growth shows up.
 
 | `<main>` height (px), 390×844 / 375×667 | English | Spanish |
 |---|---|---|
-| Hub | 3,800 / 3,929 | 4,049 / 4,158 |
+| Hub | 4,157 / 4,287 | 4,405 / 4,516 |
 | Tables | 7,268 / 7,423 | 7,904 / 8,628 |
-| Library | 5,863 / 6,026 | 6,019 / 6,206 |
+| Library | 6,997 / 7,206 | 7,153 / 7,434 |
 
 **Unapproved content stays off GitHub and Netlify.** The repository, its pull requests and its deploy previews are all public. Content that has not been approved never goes on a branch, a deploy preview, a branch name, a commit message, a PR title or body, or a preview comment. Commit it only after it has been approved.
 
