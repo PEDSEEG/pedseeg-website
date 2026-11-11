@@ -1,47 +1,89 @@
 # pedseeg.com — PALNET website
 
-Public-facing site for the Pediatric Anesthesia Learning Network for Emerging Technology (PALNET). Hand-written static HTML/CSS/JS — no framework, no build step.
+Public-facing site for the Pediatric Anesthesia Learning Network for EEG Technologies (PALNET). Hand-written static HTML/CSS/JS — no framework, no build step.
 
 ## File layout
 
 ```
 pedseeg-website/
-  index.html               # Home
-  about/index.html         # About
-  leadership/index.html    # Leadership committee
-  education/index.html     # Lectures, videos, literature
-  events/index.html        # Workshops + site-visit model
-  members/index.html       # Member institution directory
-  sponsors/index.html      # Sponsors + collaborators
-  contact/index.html       # Contact form (Netlify Forms)
+  index.html                  # Home
+  about/index.html            # About
+  leadership/index.html       # Leadership committee
+  education/index.html        # Education: videos, interactive tools, OR tables, literature
+  cases/index.html            # Case of the Month
+  cases/sample/index.html     # Case format sample (noindex)
+  events/index.html           # Workshops + site-visit model
+  events/genoa-2026/index.html  # Genoa 2026 workshop
+  members/index.html          # Member institution directory
+  sponsors/index.html         # Partners and collaborators
+  contact/index.html          # Contact form (Netlify Forms)
+
+  es/                         # Spanish twins of the 11 English pages:
+    index.html                #   /es/
+    nosotros/                 #   /about/
+    equipo/                   #   /leadership/
+    formacion/                #   /education/
+    casos/  casos/ejemplo/    #   /cases/  /cases/sample/
+    eventos/  eventos/genova-2026/  #   /events/  /events/genoa-2026/
+    miembros/                 #   /members/
+    colaboradores/            #   /sponsors/
+    contacto/                 #   /contact/
 
   assets/
-    css/styles.css         # Single stylesheet, CSS variables
-    js/main.js             # Mobile nav toggle, active-link highlighting
-    images/                # logo, committee headshots, sponsor logos
-    pdfs/                  # Slide decks, papers
+    css/styles.css            # Single stylesheet, CSS variables
+    js/main.js                # Mobile nav, active link, Spanish-language offer, registration deadlines
+    images/                   # logo, committee photos, partner logos, table images, video thumbnails
+    pdfs/                     # Table PDFs
 
-  netlify.toml             # Netlify build + headers config
-  _redirects               # Netlify redirects (www → apex handled here too)
-  _headers                 # Netlify response headers
+  netlify.toml                # Netlify build + headers config
+  _redirects                  # Netlify redirects (www → apex handled here too)
+  _headers                    # Netlify response headers
   robots.txt
   sitemap.xml
 ```
 
 ## Local preview
 
+From the repository root:
+
 ```bash
-cd ~/Desktop/AI\ Projects/pedseeg-website
 python3 -m http.server 8000
 ```
 
-Then open <http://localhost:8000>. Browse through every page; nav links use clean URLs (`/about/` etc.) which the Python server handles automatically.
+Then open <http://localhost:8000>. Browse through every page; nav links use clean URLs (`/about/` etc.) which the Python server handles automatically. Nothing is counted in analytics on `localhost` (see below).
 
 ## Editing content
 
-Every page is a self-contained `.html` file. To edit content, open the file and edit the markup directly. The header (`<header class="site-header">`) and footer (`<footer class="site-footer">`) are duplicated on each page — when changing nav links or footer info, update all 12 English pages and all 12 Spanish pages under `/es/` (Spanish nav and footer; copy from any `es` page). Every page has an EN | ES switch (`.lang-switch`) whose link must match that page's `<link rel="alternate" hreflang>` twin.
+Every page is a self-contained `.html` file. To edit content, open the file and edit the markup directly. The header (`<header class="site-header">`) and footer (`<footer class="site-footer">`) are duplicated on each page — when changing nav links or footer info, update all 11 English pages and all 11 Spanish pages under `/es/` (Spanish nav and footer; copy from any `es` page). Every page has an EN | ES switch (`.lang-switch`) whose link must match that page's `<link rel="alternate" hreflang>` twin.
+
+**`hreflang` on a link means "switch to this language".** Only language-switch links carry it (the EN | ES switch, the case-page language links and the footer "PALNET in English" link). `main.js` treats a click on any `hreflang="en"` link as declining the Spanish-language offer. A content link from a Spanish page to English-only material, such as a link marked "(en inglés)", never carries `hreflang`.
+
+To add a case to the Case of the Month list, copy the markup in `.github/templates/case-list-item.html` into `/cases/` and `/es/casos/`, newest case first.
 
 Theme colors are CSS variables at the top of `assets/css/styles.css`. To recolor the site, change `--accent` and friends in one place.
+
+## Analytics
+
+[GoatCounter](https://www.goatcounter.com/) (no cookies). Every page loads `count.js` at the end of `<body>`, with this guard on the line immediately before it:
+
+```html
+<script>if (location.hostname !== "pedseeg.com") window.goatcounter = Object.assign(window.goatcounter || {}, { no_onload: true, no_events: true });</script>
+```
+
+The guard stops page views and click events from being counted anywhere except `pedseeg.com` (deploy previews, `*.netlify.app`, `localhost`). GoatCounter records the path, not the host, so preview visits could not be filtered out afterwards. Every new page needs the guard before its `count.js` tag.
+
+Click events (`data-goatcounter-click`) on the Education page:
+
+| Event name | What it counts |
+|---|---|
+| `edu-video-ext-1` … `edu-video-ext-6` | The six EEG for Anesthesia video tiles (YouTube), in page order |
+| `edu-channel` | Links to the EEG for Anesthesia channel |
+| `edu-tool-wavecombinator`, `edu-tool-rotation3d`, `edu-tool-eegsandbox`, `edu-tool-edfviewer` | SmartTIVA interactive tools |
+| `edu-pdf-<basename>` | Table PDF downloads |
+| `edu-png-<basename>` | Table image downloads |
+| `edu-png-view-<basename>` | Taps on a table figure to view the image |
+
+`<basename>` is the file name without its extension, e.g. `edu-pdf-propofol-depth`. The Spanish page uses the same names with an `es-` prefix, e.g. `es-edu-channel`. Document a new event name here in the same commit that adds it.
 
 ## Deploying
 
@@ -63,18 +105,6 @@ The contact form uses **Netlify Forms**. As long as the form keeps `data-netlify
 1. Netlify → Forms → Settings → Notifications → add an email recipient.
 2. Spam protection is built in via the honeypot field; consider adding reCAPTCHA later if needed.
 
-## What still needs real content
-
-The pages are written with substantive content based on PALNET's existing materials, but a few things are placeholders to be filled in by the team:
-
-- **Committee headshots** — `/assets/images/committee/` is empty. The leadership page renders coloured circles with initials as a fallback. Drop in `dk.jpg`, `iy.jpg`, etc. and swap the `<div class="person-photo">` with `<div class="person-photo"><img src="..."></div>`.
-- **Sponsor logos** — currently shown as text boxes. Replace each `<div class="sponsor-logo-box">Medtronic</div>` with `<div class="sponsor-logo-box"><img src="/assets/images/sponsors/medtronic.svg" alt="Medtronic logo"></div>` once official logos are sourced (with permission).
-- **YouTube videos** — the Education page has commented-out `<iframe>` blocks. When the ABCEEG and EEG-Guided TIVA lectures are uploaded (recommend `youtube-nocookie.com` embeds), uncomment and paste the video ID.
-- **Slide deck PDFs** — `/assets/pdfs/ABCEEG-slides.pdf` and `/assets/pdfs/EEG-Guided-TIVA-slides.pdf` need to be added (or links removed if not OK to host publicly).
-- **Full member directory** — the current member list is partial. Update `members/index.html` once Julia confirms the complete 2026 roster.
-- **Contact email** — every page references `contact@pedseeg.com`. Configure this in Google Workspace and route to the right person on the leadership committee.
-- **OG default image** — `/assets/images/logo.jpg` is used as the social-card image; consider creating a custom 1200×630 OG image for better social previews.
-
 ## Accessibility / SEO checklist
 
 Before launch:
@@ -84,11 +114,3 @@ Before launch:
 - [ ] Submit the sitemap to Google Search Console.
 - [ ] Verify HTTPS, www→apex redirect, and that every nav link works on every page.
 - [ ] Test the contact form with a real submission and confirm the email arrives.
-
-## Future ideas (not built)
-
-- Embedded world map showing member institutions (Leaflet + simple GeoJSON)
-- Newsletter signup (Mailchimp/Buttondown)
-- Members-only section with login (would need an auth provider — Auth0 or Netlify Identity)
-- Spanish-language version for CSPA / Latin America
-- Privacy-friendly analytics (Plausible, ~$9/mo) — currently no analytics installed
