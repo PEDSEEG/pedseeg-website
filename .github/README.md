@@ -6,38 +6,38 @@ Public-facing site for the Pediatric Anesthesia Learning Network for EEG Technol
 
 ```
 pedseeg-website/
-  index.html                  # Home
-  about/index.html            # About
-  leadership/index.html       # Leadership committee
-  education/index.html        # Education: videos, interactive tools, OR tables, literature
-  cases/index.html            # Case of the Month
-  cases/sample/index.html     # Case format sample (noindex)
-  events/index.html           # Workshops + site-visit model
+  index.html               # Home
+  about/index.html         # About
+  leadership/index.html    # Leadership committee
+  education/index.html     # Education: videos, interactive tools, OR tables, literature
+  cases/index.html         # Case of the Month
+  cases/sample/index.html  # Case format sample (noindex)
+  events/index.html        # Workshops + site-visit model
   events/genoa-2026/index.html  # Genoa 2026 workshop
-  members/index.html          # Member institution directory
-  sponsors/index.html         # Partners and collaborators
-  contact/index.html          # Contact form (Netlify Forms)
+  members/index.html       # Member institution directory
+  sponsors/index.html      # Partners and collaborators
+  contact/index.html       # Contact form (Netlify Forms)
 
-  es/                         # Spanish twins of the 11 English pages:
-    index.html                #   /es/
-    nosotros/                 #   /about/
-    equipo/                   #   /leadership/
-    formacion/                #   /education/
-    casos/  casos/ejemplo/    #   /cases/  /cases/sample/
+  es/                      # Spanish twins of the 11 English pages:
+    index.html             #   /es/
+    nosotros/              #   /about/
+    equipo/                #   /leadership/
+    formacion/             #   /education/
+    casos/  casos/ejemplo/  #   /cases/  /cases/sample/
     eventos/  eventos/genova-2026/  #   /events/  /events/genoa-2026/
-    miembros/                 #   /members/
-    colaboradores/            #   /sponsors/
-    contacto/                 #   /contact/
+    miembros/              #   /members/
+    colaboradores/         #   /sponsors/
+    contacto/              #   /contact/
 
   assets/
-    css/styles.css            # Single stylesheet, CSS variables
-    js/main.js                # Mobile nav, active link, Spanish-language offer, registration deadlines
-    images/                   # logo, committee photos, partner logos, table images, video thumbnails
-    pdfs/                     # Table PDFs
+    css/styles.css         # Single stylesheet, CSS variables
+    js/main.js             # Mobile nav, active link, Spanish-language offer, registration deadlines
+    images/                # logo, committee photos, partner logos, table images, video thumbnails
+    pdfs/                  # Table PDFs
 
-  netlify.toml                # Netlify build + headers config
-  _redirects                  # Netlify redirects (www → apex handled here too)
-  _headers                    # Netlify response headers
+  netlify.toml             # Netlify build + headers config
+  _redirects               # Netlify redirects (www → apex is in netlify.toml)
+  _headers                 # Netlify response headers
   robots.txt
   sitemap.xml
 ```
