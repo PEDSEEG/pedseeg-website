@@ -94,7 +94,7 @@ A step gets its own page when its PALNET text is approved and it holds a cleared
 - `sitemap.xml` (both twins, with en/es/x-default alternates);
 - the forwarder map in the hub's `<head>`, if the step takes over an old hub anchor.
 
-A new page also needs its own title, meta description and og tags, reciprocal `hreflang` en/es/x-default links, the EN | ES switch pointing to its twin, the nav and footer copied from a page of the same language, the Education bar (hub excepted), `main.js`, and the GoatCounter snippet with the guard (see Analytics).
+A new page also needs its own title, meta description and og tags, reciprocal `hreflang` en/es/x-default links, the EN | ES switch pointing to its twin, the nav and footer copied from a page of the same language, the Education bar (on every Education page, the hub included, with `aria-current` on the page's own item), `main.js`, and the GoatCounter snippet with the guard (see Analytics).
 
 **Phone check.** Check every Education build with headless Chrome at 390×844 and 375×667, after fonts and images have loaded, in English (browser language set to Spanish first, so the Spanish-offer banner shows) and in Spanish. No page may scroll sideways. There is no length cap; the heights are recorded so that growth shows up.
 
