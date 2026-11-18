@@ -1165,6 +1165,8 @@ main { counter-reset: step; }
 }
 .edu-bar a:hover { color: var(--accent); background: var(--paper-tint); }
 .edu-bar a[aria-current="page"] { color: var(--accent); background: var(--accent-soft); }
+/* Narrow phones: tighter pills so "Ruta de aprendizaje · Tablas · Biblioteca" stays on one line at 360–389 px */
+@media (max-width: 389.98px) { .edu-bar a { padding: 0 0.55rem; } }
 
 /* Library */
 .lib-heading { margin: 2.5rem 0 0.4rem; font-size: clamp(1.25rem, 2.4vw, 1.55rem); }
